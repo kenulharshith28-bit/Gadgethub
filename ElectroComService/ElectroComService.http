@@ -1,0 +1,6 @@
+@ElectroComService_HostAddress = http://localhost:5276
+
+GET {{ElectroComService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

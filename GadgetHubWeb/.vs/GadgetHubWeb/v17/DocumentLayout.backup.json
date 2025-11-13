@@ -1,0 +1,583 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\productdetails.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\productdetails.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\orderconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\orderconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\orderconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\orderconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\trackorder.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\trackorder.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\trackorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\trackorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\addproduct.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\addproduct.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\addproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\addproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\admindashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\admindashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\productdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\productdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\services\\cartitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\services\\cartitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HARSHITH\\AppData\\Local\\Temp\\.vsdbgsrc\\cd6711a6a72d082b90d125757dca842c0057b59abec48122ace8d4227c5ab72d\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\cart.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\cart.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\products.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\products.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\models\\orderresponseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\models\\orderresponseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\models\\orderrequestviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\models\\orderrequestviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\pages\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\pages\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\models\\ordertrackingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\models\\ordertrackingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\models\\quotationresponseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\models\\quotationresponseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|c:\\users\\harshith\\desktop\\project\\gadgethubweb\\gadgethubweb\\models\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47853CB5-B034-4802-B81E-DB1A9C6AD9D0}|GadgetHubWeb\\GadgetHubWeb.csproj|solutionrelative:gadgethubweb\\models\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\OrderConfirmation.cshtml",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\OrderConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\OrderConfirmation.cshtml",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\OrderConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-09T21:03:09.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductDetails.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\ProductDetails.cshtml.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\ProductDetails.cshtml.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\ProductDetails.cshtml.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\ProductDetails.cshtml.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAqwCEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T18:49:30.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TrackOrder.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\TrackOrder.cshtml.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\TrackOrder.cshtml.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\TrackOrder.cshtml.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\TrackOrder.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T20:24:43.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TrackOrder.cshtml",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\TrackOrder.cshtml",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\TrackOrder.cshtml",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\TrackOrder.cshtml",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\TrackOrder.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-09T20:24:35.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Index.cshtml",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAKEBAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-09T20:22:51.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T20:19:30.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderConfirmation.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\OrderConfirmation.cshtml.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\OrderConfirmation.cshtml.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\OrderConfirmation.cshtml.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\OrderConfirmation.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T21:29:28.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddProduct.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\AddProduct.cshtml.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\AddProduct.cshtml.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\AddProduct.cshtml.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\AddProduct.cshtml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwC0AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T18:05:42.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Products.cshtml",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Products.cshtml",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\Products.cshtml",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Products.cshtml",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\Products.cshtml",
+              "ViewState": "AgIAAKYBAAAAAAAAAIAwwL0BAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-12T08:45:25.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminDashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\AdminDashboard.cshtml",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\AdminDashboard.cshtml",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\AdminDashboard.cshtml",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\AdminDashboard.cshtml",
+              "ViewState": "AgIAAMYBAAAAAAAAAAAqwMgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-20T11:06:59.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdminDashboard.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\AdminDashboard.cshtml.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\AdminDashboard.cshtml.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\AdminDashboard.cshtml.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\AdminDashboard.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T11:08:09.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\AddProduct.cshtml",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\AddProduct.cshtml",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\AddProduct.cshtml",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\AddProduct.cshtml",
+              "ViewState": "AgIAAHwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-18T18:04:55.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Services\\CartService.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Services\\CartService.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Services\\CartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T20:35:20.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Login.cshtml.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\Login.cshtml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwDwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T08:38:43.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\ProductDetails.cshtml",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\ProductDetails.cshtml",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\ProductDetails.cshtml",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\ProductDetails.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-10T18:49:17.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Login.cshtml",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\Login.cshtml",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Login.cshtml",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\Login.cshtml",
+              "ViewState": "AgIAADkBAAAAAAAAAAAowFABAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-12T08:38:27.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAADwv2MAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-12T08:24:58.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\appsettings.json",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\appsettings.json",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\appsettings.json",
+              "RelativeToolTip": "GadgetHubWeb\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-12T12:41:15.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApiClient.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Services\\ApiClient.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Services\\ApiClient.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Services\\ApiClient.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Services\\ApiClient.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAmwH0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T20:16:30.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "GadgetHubWeb\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAACYBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-16T09:47:48.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-12T08:26:12.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CartItemViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Services\\CartItemViewModel.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Services\\CartItemViewModel.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Services\\CartItemViewModel.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Services\\CartItemViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T20:36:34.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\AppData\\Local\\Temp\\.vsdbgsrc\\cd6711a6a72d082b90d125757dca842c0057b59abec48122ace8d4227c5ab72d\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\cd6711a6a72d082b90d125757dca842c0057b59abec48122ace8d4227c5ab72d\\Program.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\AppData\\Local\\Temp\\.vsdbgsrc\\cd6711a6a72d082b90d125757dca842c0057b59abec48122ace8d4227c5ab72d\\Program.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\cd6711a6a72d082b90d125757dca842c0057b59abec48122ace8d4227c5ab72d\\Program.cs [Read Only]",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAhwCEAAAAAAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T11:30:21.815Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Products.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Products.cshtml.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\Products.cshtml.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Products.cshtml.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\Products.cshtml.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAzwKkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T08:45:38.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Register.cshtml",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\Register.cshtml",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Register.cshtml",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\Register.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-12T08:57:58.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Program.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Program.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Program.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T20:18:20.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Cart.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Cart.cshtml.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\Cart.cshtml.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Cart.cshtml.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\Cart.cshtml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwB4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T21:01:50.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Register.cshtml.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\Register.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T08:58:03.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-12T08:35:02.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "OrderResponseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Models\\OrderResponseViewModel.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Models\\OrderResponseViewModel.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Models\\OrderResponseViewModel.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Models\\OrderResponseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T21:27:47.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "OrderRequestViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Models\\OrderRequestViewModel.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Models\\OrderRequestViewModel.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Models\\OrderRequestViewModel.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Models\\OrderRequestViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T21:27:20.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Cart.cshtml",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Cart.cshtml",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Pages\\Cart.cshtml",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Pages\\Cart.cshtml",
+              "RelativeToolTip": "GadgetHubWeb\\Pages\\Cart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-09T21:01:41.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "OrderTrackingViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Models\\OrderTrackingViewModel.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Models\\OrderTrackingViewModel.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Models\\OrderTrackingViewModel.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Models\\OrderTrackingViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T20:18:08.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "QuotationResponseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Models\\QuotationResponseViewModel.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Models\\QuotationResponseViewModel.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Models\\QuotationResponseViewModel.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Models\\QuotationResponseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T20:17:47.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ProductViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Models\\ProductViewModel.cs",
+              "RelativeDocumentMoniker": "GadgetHubWeb\\Models\\ProductViewModel.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetHubWeb\\GadgetHubWeb\\Models\\ProductViewModel.cs",
+              "RelativeToolTip": "GadgetHubWeb\\Models\\ProductViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T20:17:24.988Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

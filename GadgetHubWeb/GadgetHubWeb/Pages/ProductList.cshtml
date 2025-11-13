@@ -1,0 +1,646 @@
+@page
+@model GadgetHubWeb.Pages.ProductListModel
+@{
+    ViewData["Title"] = "Product List";
+}
+
+<style>
+    :root {
+        --admin-primary: #1e40af;
+        --admin-secondary: #3b82f6;
+        --admin-accent: #60a5fa;
+        --admin-dark: #1e3a8a;
+        --admin-light: #dbeafe;
+        --admin-success: #10b981;
+        --admin-warning: #f59e0b;
+        --admin-danger: #ef4444;
+        --admin-gray: #6b7280;
+        --admin-light-gray: #f3f4f6;
+        --admin-white: #ffffff;
+        --admin-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --admin-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .admin-container {
+        display: flex;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+
+    .admin-sidebar {
+        width: 280px;
+        background: linear-gradient(180deg, var(--admin-primary) 0%, var(--admin-dark) 100%);
+        box-shadow: var(--admin-shadow-lg);
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+    .admin-sidebar-header {
+        padding: 2rem 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .admin-sidebar-title {
+        color: var(--admin-white);
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0;
+        text-align: center;
+    }
+
+    .admin-nav {
+        padding: 1rem 0;
+    }
+
+    .admin-nav-item {
+        margin: 0.5rem 1rem;
+    }
+
+    .admin-nav-link {
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .admin-nav-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--admin-white);
+        transform: translateX(4px);
+    }
+
+    .admin-nav-link.active {
+        background: var(--admin-accent);
+        color: var(--admin-white);
+        box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+    }
+
+    .admin-nav-link i {
+        margin-right: 0.75rem;
+        font-size: 1.1rem;
+        width: 20px;
+    }
+
+    .admin-main {
+        flex: 1;
+        margin-left: 280px;
+        padding: 2rem;
+    }
+
+    .admin-header {
+        background: var(--admin-white);
+        padding: 1.5rem 2rem;
+        border-radius: 16px;
+        box-shadow: var(--admin-shadow);
+        margin-bottom: 2rem;
+        border-left: 4px solid var(--admin-primary);
+    }
+
+    .admin-title {
+        color: var(--admin-primary);
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .admin-subtitle {
+        color: var(--admin-gray);
+        margin: 0.5rem 0 0 0;
+        font-size: 1rem;
+    }
+
+    .admin-section {
+        background: var(--admin-white);
+        border-radius: 16px;
+        box-shadow: var(--admin-shadow);
+        margin-bottom: 2rem;
+        overflow: hidden;
+    }
+
+    .admin-section-header {
+        background: linear-gradient(135deg, var(--admin-primary) 0%, var(--admin-secondary) 100%);
+        color: var(--admin-white);
+        padding: 1.5rem 2rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .admin-section-content {
+        padding: 2rem;
+    }
+
+    .admin-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+    }
+
+    .admin-table th {
+        background: var(--admin-light-gray);
+        color: var(--admin-primary);
+        font-weight: 600;
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 2px solid var(--admin-light);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .admin-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #e5e7eb;
+        vertical-align: middle;
+    }
+
+    .admin-table tbody tr:hover {
+        background: var(--admin-light-gray);
+    }
+
+    .status-badge {
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .status-high { background: #d1fae5; color: #065f46; }
+    .status-medium { background: #fef3c7; color: #92400e; }
+    .status-low { background: #fee2e2; color: #991b1b; }
+    .status-out { background: #f3f4f6; color: #6b7280; }
+
+    .product-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        object-fit: cover;
+        border: 2px solid #e5e7eb;
+    }
+
+    .product-name {
+        font-weight: 600;
+        color: var(--admin-primary);
+        margin-bottom: 0.25rem;
+    }
+
+    .product-description {
+        color: var(--admin-gray);
+        font-size: 0.875rem;
+        margin: 0;
+    }
+
+    .price {
+        font-weight: 700;
+        color: var(--admin-success);
+        font-size: 1.1rem;
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: var(--admin-gray);
+    }
+
+    .empty-state i {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.5;
+        color: var(--admin-gray);
+    }
+
+    .empty-state h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--admin-gray);
+    }
+
+    .empty-state p {
+        font-size: 1rem;
+        margin: 0;
+        color: var(--admin-gray);
+    }
+
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .stat-card {
+        background: var(--admin-white);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: var(--admin-shadow);
+        border-left: 4px solid var(--admin-primary);
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--admin-primary);
+        margin: 0;
+        line-height: 1;
+    }
+
+    .stat-label {
+        color: var(--admin-gray);
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin: 0.5rem 0 0 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--admin-primary);
+        text-decoration: none;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+        color: var(--admin-secondary);
+        transform: translateX(-4px);
+    }
+
+    .btn-add-product {
+        background: linear-gradient(135deg, var(--admin-success) 0%, #059669 100%);
+        color: var(--admin-white);
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-add-product::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.5s;
+    }
+
+    .btn-add-product:hover::before {
+        left: 100%;
+    }
+
+    .btn-add-product:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    }
+
+    .btn-add-product:active {
+        transform: translateY(0);
+    }
+
+    .btn-add-product i {
+        font-size: 1rem;
+    }
+
+    .distributor-badge {
+        background: linear-gradient(135deg, var(--admin-secondary) 0%, var(--admin-accent) 100%);
+        color: var(--admin-white);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: inline-block;
+    }
+
+    .btn-remove {
+        background: linear-gradient(135deg, var(--admin-danger) 0%, #dc2626 100%);
+        color: var(--admin-white);
+        border: none;
+        padding: 0.5rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+    }
+
+    .btn-remove:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+        background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    }
+
+    .btn-remove:active {
+        transform: translateY(0);
+    }
+
+    .btn-remove i {
+        font-size: 0.9rem;
+    }
+
+    @@media (max-width: 768px) {
+        .admin-sidebar {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .admin-main {
+            margin-left: 0;
+            padding: 1rem;
+        }
+        
+        .stats-row {
+            grid-template-columns: 1fr;
+        }
+        
+        .admin-table {
+            font-size: 0.875rem;
+        }
+        
+        .admin-table th,
+        .admin-table td {
+            padding: 0.75rem 0.5rem;
+        }
+        
+        .admin-header > div {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .btn-add-product {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+</style>
+
+<div class="admin-container">
+    <!-- Sidebar -->
+    <div class="admin-sidebar">
+        <div class="admin-sidebar-header">
+            <h2 class="admin-sidebar-title">Admin Panel</h2>
+        </div>
+        <nav class="admin-nav">
+            <div class="admin-nav-item">
+                <a href="/AdminDashboard" class="admin-nav-link">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Admin Dashboard
+                </a>
+            </div>
+            <div class="admin-nav-item">
+                <a href="/AdminRegister" class="admin-nav-link">
+                    <i class="fas fa-user-plus"></i>
+                    Admin Register
+                </a>
+            </div>
+            <div class="admin-nav-item">
+                <a href="/ProductList" class="admin-nav-link active">
+                    <i class="fas fa-box"></i>
+                    Product List
+                </a>
+            </div>
+            <div class="admin-nav-item">
+                <a href="#" class="admin-nav-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    Order List
+                </a>
+            </div>
+            <div class="admin-nav-item">
+                <a href="/Logout" class="admin-nav-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="admin-main">
+        <a href="/AdminDashboard" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Back to Dashboard
+        </a>
+
+        <div class="admin-header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h1 class="admin-title">Product List</h1>
+                    <p class="admin-subtitle">Manage your product inventory and stock levels.</p>
+                </div>
+                <a href="/AddProduct" class="btn-add-product">
+                    <i class="fas fa-plus"></i>
+                    Add Products
+                </a>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <h3 class="stat-number">@Model.TotalProducts</h3>
+                <p class="stat-label">Total Products</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="stat-number">@Model.InStockProducts</h3>
+                <p class="stat-label">In Stock</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="stat-number">@Model.LowStockProducts</h3>
+                <p class="stat-label">Low Stock</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="stat-number">@Model.OutOfStockProducts</h3>
+                <p class="stat-label">Out of Stock</p>
+            </div>
+        </div>
+
+        <!-- Product Inventory Section -->
+        <div class="admin-section">
+            <h3 class="admin-section-header">
+                <i class="fas fa-box"></i>
+                Product Inventory
+            </h3>
+            <div class="admin-section-content">
+                @if (Model.Products.Any())
+                {
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Distributor</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var product in Model.Products)
+                            {
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            @if (!string.IsNullOrEmpty(product.ImageUrl))
+                                            {
+                                                <img src="@product.ImageUrl" alt="@product.Name" class="product-image" />
+                                            }
+                                            else
+                                            {
+                                                <div class="product-image" style="background: var(--admin-light-gray); display: flex; align-items: center; justify-content: center;">
+                                                    <i class="fas fa-image" style="color: var(--admin-gray);"></i>
+                                                </div>
+                                            }
+                                            <div>
+                                                <div class="product-name">@product.Name</div>
+                                                <p class="product-description">@product.Description</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="distributor-badge">
+                                            @product.DistributorName
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <button class="btn-remove" onclick="removeProduct('@product.GlobalId', '@product.Name')" title="Remove Product">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <div class="empty-state">
+                        <i class="fas fa-box"></i>
+                        <h4>No Products Found</h4>
+                        <p>No products are currently in inventory.</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    async function removeProduct(globalId, productName) {
+        if (confirm(`Are you sure you want to remove "${productName}" from the inventory?`)) {
+            try {
+                console.log('Attempting to delete product with GlobalId:', globalId);
+                const url = `https://localhost:7282/api/Product/by-global-id/${encodeURIComponent(globalId)}`;
+                console.log('Request URL:', url);
+                const response = await fetch(url, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+
+                console.log('Response status:', response.status);
+                console.log('Response ok:', response.ok);
+                
+                if (response.ok) {
+                    // Show success message
+                    showNotification(`Product "${productName}" has been removed successfully.`, 'success');
+                    // Reload the page to reflect changes
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1500);
+                } else {
+                    // Try to parse JSON error response, fallback to text
+                    let errorMessage = 'Unknown error';
+                    try {
+                        const errorData = await response.json();
+                        errorMessage = errorData.message || errorData || 'Unknown error';
+                    } catch (jsonError) {
+                        // If JSON parsing fails, try to get text response
+                        try {
+                            const errorText = await response.text();
+                            errorMessage = errorText || 'Unknown error';
+                        } catch (textError) {
+                            errorMessage = `HTTP ${response.status}: ${response.statusText}`;
+                        }
+                    }
+                    showNotification(`Error removing product: ${errorMessage}`, 'error');
+                }
+            } catch (error) {
+                showNotification(`Error removing product: ${error.message}`, 'error');
+            }
+        }
+    }
+
+    function showNotification(message, type) {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            z-index: 10000;
+            max-width: 400px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        `;
+
+        if (type === 'success') {
+            notification.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+        } else {
+            notification.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
+        }
+
+        notification.textContent = message;
+        document.body.appendChild(notification);
+
+        // Animate in
+        setTimeout(() => {
+            notification.style.transform = 'translateX(0)';
+        }, 100);
+
+        // Remove after 3 seconds
+        setTimeout(() => {
+            notification.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 300);
+        }, 3000);
+    }
+</script>
+

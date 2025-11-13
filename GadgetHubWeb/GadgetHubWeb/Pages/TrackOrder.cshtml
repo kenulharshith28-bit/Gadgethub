@@ -1,0 +1,43 @@
+﻿@page
+@model GadgetHubWeb.Pages.TrackOrderModel
+
+<h2>Track Your Order</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label>Enter Order ID:</label>
+        <input asp-for="OrderId" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Track</button>
+</form>
+
+@if (Model.Order != null)
+{
+    <h3 class="mt-4">Order Details</h3>
+    <table class="table">
+        <tr>
+            <th>Order ID</th>
+            <td>@Model.Order.OrderId</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>@Model.Order.Status</td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <td>$@Model.Order.TotalAmount</td>
+        </tr>
+        <tr>
+            <th>Distributor</th>
+            <td>@Model.Order.DistributorName (@Model.Order.DistributorLocation)</td>
+        </tr>
+        <tr>
+            <th>Order Date</th>
+            <td>@Model.Order.OrderDate</td>
+        </tr>
+    </table>
+}
+else if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <p class="text-danger">@Model.ErrorMessage</p>
+}

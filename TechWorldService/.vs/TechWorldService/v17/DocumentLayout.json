@@ -1,0 +1,309 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\dto\\productreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\dto\\productreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\controllers\\quotationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\controllers\\quotationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\dto\\quotationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\dto\\quotationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\dto\\quotationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\dto\\quotationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\migrations\\20250910102125_addglobalidandimageurl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\migrations\\20250910102125_addglobalidandimageurl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\migrations\\20250908183443_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\migrations\\20250908183443_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\models\\quotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\models\\quotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\data\\productrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\data\\productrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\dto\\productwritedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\dto\\productwritedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|c:\\users\\harshith\\desktop\\project\\techworldservice\\techworldservice\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0F9959-6358-4126-8DED-1C04E28CDB94}|TechWorldService\\TechWorldService.csproj|solutionrelative:techworldservice\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Profiles\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\Profiles\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Profiles\\MappingProfile.cs",
+              "RelativeToolTip": "TechWorldService\\Profiles\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T17:40:17.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\appsettings.json",
+              "RelativeDocumentMoniker": "TechWorldService\\appsettings.json",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\appsettings.json",
+              "RelativeToolTip": "TechWorldService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-08T17:53:52.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductReadDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\DTO\\ProductReadDTO.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\DTO\\ProductReadDTO.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\DTO\\ProductReadDTO.cs",
+              "RelativeToolTip": "TechWorldService\\DTO\\ProductReadDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T17:38:01.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Program.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\Program.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Program.cs",
+              "RelativeToolTip": "TechWorldService\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T17:51:30.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Models\\Product.cs",
+              "RelativeToolTip": "TechWorldService\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T17:36:53.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "QuotationResponse.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\DTO\\QuotationResponse.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\DTO\\QuotationResponse.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\DTO\\QuotationResponse.cs",
+              "RelativeToolTip": "TechWorldService\\DTO\\QuotationResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T17:38:46.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QuotationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\DTO\\QuotationRequest.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\DTO\\QuotationRequest.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\DTO\\QuotationRequest.cs",
+              "RelativeToolTip": "TechWorldService\\DTO\\QuotationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T17:38:31.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QuotationController.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Controllers\\QuotationController.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\Controllers\\QuotationController.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Controllers\\QuotationController.cs",
+              "RelativeToolTip": "TechWorldService\\Controllers\\QuotationController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T17:39:51.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Quotation.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Models\\Quotation.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\Models\\Quotation.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Models\\Quotation.cs",
+              "RelativeToolTip": "TechWorldService\\Models\\Quotation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T17:37:35.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20250908183443_InitialCreate.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Migrations\\20250908183443_InitialCreate.Designer.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\Migrations\\20250908183443_InitialCreate.Designer.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Migrations\\20250908183443_InitialCreate.Designer.cs",
+              "RelativeToolTip": "TechWorldService\\Migrations\\20250908183443_InitialCreate.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T08:06:01.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "TechWorldService\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\appsettings.Development.json",
+              "RelativeToolTip": "TechWorldService\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-15T07:14:26.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20250910102125_AddGlobalIdAndImageUrl.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Migrations\\20250910102125_AddGlobalIdAndImageUrl.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\Migrations\\20250910102125_AddGlobalIdAndImageUrl.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Migrations\\20250910102125_AddGlobalIdAndImageUrl.cs",
+              "RelativeToolTip": "TechWorldService\\Migrations\\20250910102125_AddGlobalIdAndImageUrl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T10:21:25.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeToolTip": "TechWorldService\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T08:06:11.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductRepo.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Data\\ProductRepo.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\Data\\ProductRepo.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Data\\ProductRepo.cs",
+              "RelativeToolTip": "TechWorldService\\Data\\ProductRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T17:39:20.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "TechWorldService\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwBMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T17:39:39.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "TechWorldService\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T17:39:04.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductWriteDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\DTO\\ProductWriteDTO.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\DTO\\ProductWriteDTO.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\DTO\\ProductWriteDTO.cs",
+              "RelativeToolTip": "TechWorldService\\DTO\\ProductWriteDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T17:38:16.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "TechWorldService\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\TechWorldService\\TechWorldService\\Models\\Order.cs",
+              "RelativeToolTip": "TechWorldService\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T17:37:11.261Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

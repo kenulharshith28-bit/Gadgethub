@@ -1,0 +1,10 @@
+C:\Users\HARSHITH\Desktop\Project\ElectroComSystem\ElectroComSystem\bin\Debug\ElectroComSystem.exe.config
+C:\Users\HARSHITH\Desktop\Project\ElectroComSystem\ElectroComSystem\bin\Debug\ElectroComSystem.exe
+C:\Users\HARSHITH\Desktop\Project\ElectroComSystem\ElectroComSystem\bin\Debug\ElectroComSystem.pdb
+C:\Users\HARSHITH\Desktop\Project\ElectroComSystem\ElectroComSystem\obj\Debug\ElectroComSystem.csproj.AssemblyReference.cache
+C:\Users\HARSHITH\Desktop\Project\ElectroComSystem\ElectroComSystem\obj\Debug\ElectroComSystem.Form1.resources
+C:\Users\HARSHITH\Desktop\Project\ElectroComSystem\ElectroComSystem\obj\Debug\ElectroComSystem.Properties.Resources.resources
+C:\Users\HARSHITH\Desktop\Project\ElectroComSystem\ElectroComSystem\obj\Debug\ElectroComSystem.csproj.GenerateResource.cache
+C:\Users\HARSHITH\Desktop\Project\ElectroComSystem\ElectroComSystem\obj\Debug\ElectroComSystem.csproj.CoreCompileInputs.cache
+C:\Users\HARSHITH\Desktop\Project\ElectroComSystem\ElectroComSystem\obj\Debug\ElectroComSystem.exe
+C:\Users\HARSHITH\Desktop\Project\ElectroComSystem\ElectroComSystem\obj\Debug\ElectroComSystem.pdb

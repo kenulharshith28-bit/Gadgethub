@@ -1,0 +1,573 @@
+@page
+@model GadgetHubWeb.Pages.OrdersModel
+@{
+    ViewData["Title"] = "My Orders";
+}
+
+<style>
+    .orders-page {
+        min-height: 100vh;
+        background: linear-gradient(135deg, var(--dark-bg-primary) 0%, var(--dark-bg-secondary) 100%);
+        padding: 2rem 0;
+    }
+
+    .orders-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .orders-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .orders-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--dark-text-primary);
+        margin-bottom: 1rem;
+    }
+
+    .orders-subtitle {
+        color: var(--dark-text-secondary);
+        font-size: 1.1rem;
+    }
+
+    .orders-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .stat-card {
+        background: var(--dark-bg-secondary);
+        border: 1px solid var(--border-dark);
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-dark-lg);
+        border-color: var(--accent-blue);
+    }
+
+    .stat-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--accent-blue);
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        color: var(--dark-text-secondary);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .orders-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .order-card {
+        background: var(--dark-bg-secondary);
+        border: 1px solid var(--border-dark);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .order-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-dark-lg);
+        border-color: var(--accent-blue);
+    }
+
+    .order-header {
+        background: var(--dark-bg-tertiary);
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border-dark);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .order-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .order-number {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--dark-text-primary);
+    }
+
+    .order-date {
+        color: var(--dark-text-secondary);
+        font-size: 0.9rem;
+    }
+
+    .order-amount {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--accent-green);
+    }
+
+    .order-status {
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .status-processing {
+        background: rgba(245, 158, 11, 0.2);
+        color: #f59e0b;
+        border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .status-confirmed {
+        background: rgba(59, 130, 246, 0.2);
+        color: var(--accent-blue);
+        border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .status-shipped {
+        background: rgba(16, 185, 129, 0.2);
+        color: var(--accent-green);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .status-delivered {
+        background: rgba(16, 185, 129, 0.3);
+        color: var(--accent-green);
+        border: 1px solid rgba(16, 185, 129, 0.5);
+    }
+
+    .status-cancelled {
+        background: rgba(239, 68, 68, 0.2);
+        color: var(--accent-red);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .order-content {
+        padding: 1.5rem;
+    }
+
+    .order-items {
+        margin-bottom: 1.5rem;
+    }
+
+    .order-items-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--dark-text-primary);
+        margin-bottom: 1rem;
+    }
+
+    .order-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background: var(--dark-bg-tertiary);
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+        border: 1px solid var(--border-dark);
+    }
+
+    .item-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .item-name {
+        font-weight: 600;
+        color: var(--dark-text-primary);
+    }
+
+    .item-details {
+        font-size: 0.9rem;
+        color: var(--dark-text-secondary);
+    }
+
+    .item-price {
+        font-weight: 700;
+        color: var(--accent-green);
+    }
+
+    .order-summary {
+        background: var(--dark-bg-tertiary);
+        border-radius: 8px;
+        padding: 1rem;
+        border: 1px solid var(--border-dark);
+    }
+
+    .summary-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--dark-text-primary);
+        margin-bottom: 0.75rem;
+    }
+
+    .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .summary-item {
+        text-align: center;
+    }
+
+    .summary-value {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--accent-blue);
+        margin-bottom: 0.25rem;
+    }
+
+    .summary-label {
+        font-size: 0.8rem;
+        color: var(--dark-text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .order-actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .btn-action {
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .btn-primary {
+        background: var(--accent-blue);
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: #2563eb;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--dark-text-secondary);
+        border: 1px solid var(--border-dark);
+    }
+
+    .btn-secondary:hover {
+        background: var(--dark-bg-tertiary);
+        color: var(--dark-text-primary);
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: var(--dark-text-secondary);
+    }
+
+    .empty-icon {
+        font-size: 4rem;
+        color: var(--dark-text-muted);
+        margin-bottom: 1rem;
+    }
+
+    .empty-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--dark-text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .empty-description {
+        margin-bottom: 2rem;
+    }
+
+    .btn-shop {
+        background: var(--accent-blue);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+
+    .btn-shop:hover {
+        background: #2563eb;
+        transform: translateY(-2px);
+        color: white;
+    }
+
+    .loading {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: var(--dark-text-secondary);
+    }
+
+    .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid var(--border-dark);
+        border-top: 4px solid var(--accent-blue);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 1rem;
+    }
+
+    @@keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @@media (max-width: 768px) {
+        .orders-container {
+            padding: 0 0.5rem;
+        }
+
+        .orders-title {
+            font-size: 2rem;
+        }
+
+        .order-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .order-actions {
+            width: 100%;
+            justify-content: stretch;
+        }
+
+        .btn-action {
+            flex: 1;
+            justify-content: center;
+        }
+
+        .summary-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>
+
+<div class="orders-page">
+    <div class="orders-container">
+        <div class="orders-header">
+            <h1 class="orders-title">My Orders</h1>
+            <p class="orders-subtitle">Track and manage your orders</p>
+        </div>
+
+        @if (Model.IsLoading)
+        {
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading your orders...</p>
+            </div>
+        }
+        else if (Model.Orders.Any())
+        {
+            <div class="orders-stats">
+                <div class="stat-card">
+                    <div class="stat-number">@Model.Orders.Count</div>
+                    <div class="stat-label">Total Orders</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">@Model.Orders.Count(o => o.Status == "Delivered")</div>
+                    <div class="stat-label">Delivered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">@Model.Orders.Count(o => o.Status == "Processing" || o.Status == "Confirmed")</div>
+                    <div class="stat-label">In Progress</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">LKR @Model.Orders.Sum(o => o.TotalAmount).ToString("F2")</div>
+                    <div class="stat-label">Total Spent</div>
+                </div>
+            </div>
+
+            <div class="orders-list">
+                @foreach (var order in Model.Orders)
+                {
+                    <div class="order-card">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <div class="order-number">Order #@order.OrderId</div>
+                                <div class="order-date">@order.OrderDate.ToString("MMM dd, yyyy 'at' h:mm tt")</div>
+                            </div>
+                            <div class="order-amount">LKR @order.TotalAmount.ToString("F2")</div>
+                            <div class="order-status status-@order.Status.ToLower()">@order.Status</div>
+                        </div>
+
+                        <div class="order-content">
+                            <div class="order-items">
+                                <div class="order-items-title">Order Items</div>
+                                @foreach (var item in order.ConfirmedItems)
+                                {
+                                    <div class="order-item">
+                                        <div class="item-info">
+                                            <div class="item-name">@item.ProductName</div>
+                                            <div class="item-details">ID: @item.GlobalId | Qty: @item.Quantity</div>
+                                        </div>
+                                        <div class="item-price">LKR @item.Price.ToString("F2")</div>
+                                    </div>
+                                }
+                            </div>
+
+                            <div class="order-summary">
+                                <div class="summary-title">Order Summary</div>
+                                <div class="summary-grid">
+                                    <div class="summary-item">
+                                        <div class="summary-value">@order.OrderSummary.TotalItems</div>
+                                        <div class="summary-label">Total Items</div>
+                                    </div>
+                                    <div class="summary-item">
+                                        <div class="summary-value">@order.OrderSummary.UniqueProducts</div>
+                                        <div class="summary-label">Products</div>
+                                    </div>
+                                    <div class="summary-item">
+                                        <div class="summary-value">@order.OrderSummary.DistributorsUsed</div>
+                                        <div class="summary-label">Distributors</div>
+                                    </div>
+                                    <div class="summary-item">
+                                        <div class="summary-value">@order.OrderSummary.EstimatedDelivery</div>
+                                        <div class="summary-label">Est. Delivery</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-actions">
+                                <a href="/TrackOrder/@order.OrderId" class="btn-action btn-primary">
+                                    <i class="fas fa-truck"></i>
+                                    Track Order
+                                </a>
+                                <a href="/OrderDetails/@order.OrderId" class="btn-action btn-secondary">
+                                    <i class="fas fa-eye"></i>
+                                    View Details
+                                </a>
+                                @if (order.Status == "Processing" || order.Status == "Confirmed")
+                                {
+                                    <button class="btn-action btn-secondary" onclick="deleteOrder(@order.OrderId)">
+                                        <i class="fas fa-trash"></i>
+                                        Delete
+                                    </button>
+                                }
+                                @if (order.Status == "Delivered")
+                                {
+                                    <button class="btn-action btn-secondary" onclick="reorder(@order.OrderId)">
+                                        <i class="fas fa-redo"></i>
+                                        Reorder
+                                    </button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-state">
+                <div class="empty-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="empty-title">No Orders Yet</div>
+                <div class="empty-description">
+                    You haven't placed any orders yet. Start shopping to see your orders here.
+                </div>
+                <a href="/Products" class="btn-shop">
+                    <i class="fas fa-shopping-cart"></i>
+                    Start Shopping
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    function reorder(orderId) {
+        if (confirm('Would you like to reorder all items from this order?')) {
+            // Implement reorder functionality
+            showNotification('Reorder feature coming soon!', 'info');
+        }
+    }
+
+    async function deleteOrder(orderId) {
+        if (!confirm('Are you sure you want to delete this order?')) return;
+
+        try {
+            const response = await fetch(`/api-proxy/Order/${orderId}`, { method: 'DELETE' });
+            if (response.status === 204) {
+                showNotification('Order deleted successfully', 'success');
+                location.reload();
+            } else {
+                const text = await response.text();
+                showNotification(`Failed to delete: ${text}`, 'error');
+            }
+        } catch (e) {
+            showNotification('Network error while deleting order', 'error');
+        }
+    }
+
+    function showNotification(message, type) {
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${type === 'success' ? '#10b981' : type === 'info' ? '#3b82f6' : '#ef4444'};
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.remove();
+        }, 3000);
+    }
+
+    // Add CSS for notification animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @@keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    `;
+    document.head.appendChild(style);
+</script>

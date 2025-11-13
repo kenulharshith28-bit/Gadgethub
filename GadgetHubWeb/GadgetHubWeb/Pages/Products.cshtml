@@ -1,0 +1,525 @@
+﻿@page
+@model GadgetHubWeb.Pages.ProductsModel
+@{
+    ViewData["Title"] = "Products";
+}
+
+<style>
+    .products-page-header {
+        background: linear-gradient(135deg, var(--dark-bg-secondary) 0%, var(--dark-bg-tertiary) 100%);
+        padding: 4rem 0;
+        text-align: center;
+    }
+    
+    .page-title {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--dark-text-primary);
+        margin-bottom: 1rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.2rem;
+        color: var(--dark-text-secondary);
+    }
+    
+    .alert-container {
+        margin: 2rem 0;
+    }
+    
+    .alert-error {
+        background: var(--accent-red);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .alert-success {
+        background: var(--accent-green);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .alert-btn {
+        background: rgba(255,255,255,0.2);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .alert-btn:hover {
+        background: rgba(255,255,255,0.3);
+        color: white;
+    }
+    
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+    
+    .product-card {
+        background: var(--dark-bg-secondary);
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        border: 1px solid var(--border-dark);
+        position: relative;
+        height: 480px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .product-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        border-color: var(--accent-blue);
+    }
+    
+    .product-image-container {
+        height: 70%;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .product-card:nth-child(3n+1) .product-image-container {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .product-card:nth-child(3n+2) .product-image-container {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+    
+    .product-card:nth-child(3n+3) .product-image-container {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+    
+    .product-number-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 8rem;
+        font-weight: 900;
+        color: rgba(255,255,255,0.1);
+        z-index: 1;
+        user-select: none;
+    }
+    
+    .product-image {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+        transition: all 0.4s ease;
+        z-index: 2;
+        position: relative;
+        filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+    }
+    
+    .product-card:hover .product-image {
+        transform: scale(1.1) rotate(5deg);
+    }
+    
+    .product-image-placeholder {
+        height: 100%;
+        background: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255,255,255,0.3);
+        font-size: 4rem;
+        position: relative;
+    }
+    
+    .product-content {
+        padding: 1.5rem;
+        background: var(--dark-bg-tertiary);
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 0;
+    }
+    
+    .product-name {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--dark-text-primary);
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        line-height: 1.3;
+    }
+    
+    .product-description {
+        color: var(--dark-text-secondary);
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
+        max-height: 4.2em; /* Approximately 3 lines */
+        overflow: hidden;
+        position: relative;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+    }
+    
+    .product-description.expanded {
+        max-height: none;
+        display: block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+    }
+    
+    .read-more-btn {
+        background: var(--accent-blue);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        width: 100%;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        margin-bottom: 0.5rem;
+    }
+    
+    .read-more-btn:hover {
+        background: #2563eb;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+    }
+    
+    .product-price {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .price-label {
+        color: var(--dark-text-secondary);
+        font-size: 0.9rem;
+    }
+    
+    .price-value {
+        color: var(--accent-green);
+        font-size: 1.4rem;
+        font-weight: 800;
+    }
+    
+    .quotation-form, .order-form {
+        margin-top: 1rem;
+    }
+    
+    .quotation-btn, .order-btn, .add-to-cart-btn {
+        background: var(--accent-blue);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        width: 100%;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        margin-bottom: 0.5rem;
+    }
+    
+    .quotation-btn:hover, .order-btn:hover, .add-to-cart-btn:hover {
+        background: #2563eb;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+    }
+    
+    .order-btn {
+        background: var(--accent-green);
+        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    }
+    
+    .order-btn:hover {
+        background: #059669;
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    }
+    
+    .add-to-cart-btn {
+        background: var(--accent-purple);
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+    }
+    
+    .add-to-cart-btn:hover {
+        background: #7c3aed;
+        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+    }
+    
+    .login-btn {
+        background: var(--accent-red);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        width: 100%;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .login-btn:hover {
+        background: #dc2626;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+    
+    .product-login-required {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .login-message {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        color: #92400e;
+        padding: 1rem;
+        border-radius: 12px;
+        text-align: center;
+        font-weight: 600;
+        border: 2px solid #f59e0b;
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+    }
+    
+    .login-message i {
+        margin-right: 0.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .product-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .quantity-group {
+        margin-bottom: 1rem;
+    }
+    
+    .quantity-group label {
+        color: var(--dark-text-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    
+    .quantity-input {
+        background: var(--dark-bg-tertiary);
+        border: 1px solid var(--border-dark);
+        color: var(--dark-text-primary);
+        padding: 0.5rem;
+        border-radius: 6px;
+        width: 100%;
+    }
+    
+    .quantity-input:focus {
+        outline: none;
+        border-color: var(--accent-blue);
+    }
+    
+    .empty-state {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: var(--dark-text-muted);
+    }
+    
+    .empty-state i {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        color: var(--dark-text-muted);
+    }
+    
+    .empty-state h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--dark-text-secondary);
+    }
+    
+    @@media (max-width: 768px) {
+        .page-title { font-size: 2rem; }
+        .products-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+        .product-card { height: 450px; }
+        .product-actions { gap: 0.5rem; }
+        .action-btn { width: 40px; height: 40px; }
+    }
+</style>
+
+<div class="products-page">
+    <!-- Page Header -->
+    <div class="products-page-header">
+        <div class="container">
+            <h1 class="page-title">Our Products</h1>
+            <p class="page-subtitle">Discover our premium collection of electronics and gadgets</p>
+        </div>
+    </div>
+
+    <!-- Alerts -->
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="container alert-container">
+            <div class="alert-error">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>@TempData["ErrorMessage"]</span>
+                @if (ViewContext.HttpContext.Session.GetString("AuthToken") == null)
+                {
+                    <a asp-page="/Login" class="alert-btn">Login</a>
+                }
+            </div>
+        </div>
+    }
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="container alert-container">
+            <div class="alert-success">
+                <i class="fas fa-check-circle"></i>
+                <span>@TempData["SuccessMessage"]</span>
+            </div>
+        </div>
+    }
+
+    <!-- Products Grid -->
+    <div class="container">
+        @if (Model.Products.Any())
+        {
+            <div class="products-grid">
+                @foreach (var product in Model.Products)
+                {
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <div class="product-number-bg">@(product.Id % 10)</div>
+                            @if (!string.IsNullOrEmpty(product.ImageUrl))
+                            {
+                                <img src="@product.ImageUrl" class="product-image" alt="@product.Name" />
+                            }
+                            else
+                            {
+                                <div class="product-image-placeholder">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                            }
+                        </div>
+                        <div class="product-content">
+                            <div>
+                                <h3 class="product-name">@product.Name</h3>
+                                @if (!string.IsNullOrEmpty(product.Description))
+                                {
+                                    <div class="product-description" id="desc-@product.Id">
+                                        @product.Description
+                                    </div>
+                                    @if (product.Description.Length > 120)
+                                    {
+                                        <button class="read-more-btn" onclick="toggleDescription(@product.Id)">
+                                            Read More
+                                        </button>
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="product-description">
+                                        Premium quality product with cutting-edge technology and modern design.
+                                    </div>
+                                }
+                            </div>
+                            
+                            <!-- Simplified - Only View Details button for all users -->
+                            <div class="product-actions">
+                                <a asp-page="/ProductDetails" asp-route-id="@product.Id" class="quotation-btn">
+                                    <i class="fas fa-search"></i>
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-state">
+                <i class="fas fa-box-open"></i>
+                <h3>No Products Available</h3>
+                <p>We're working on adding more products. Check back soon!</p>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    function viewProduct(productId) {
+        window.location.href = '/ProductDetails/' + productId;
+    }
+    
+    function addToWishlist(productId) {
+        // Add wishlist functionality here
+        alert('Added to wishlist!');
+    }
+    
+    function toggleDescription(productId) {
+        const description = document.getElementById('desc-' + productId);
+        const button = description.nextElementSibling;
+        
+        if (description.classList.contains('expanded')) {
+            description.classList.remove('expanded');
+            button.textContent = 'Read More';
+        } else {
+            description.classList.add('expanded');
+            button.textContent = 'Read Less';
+        }
+    }
+    
+    // Initialize descriptions on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if descriptions need Read More buttons
+        const descriptions = document.querySelectorAll('.product-description');
+        descriptions.forEach(function(desc) {
+            if (desc.scrollHeight > desc.clientHeight) {
+                const button = desc.nextElementSibling;
+                if (button && button.classList.contains('read-more-btn')) {
+                    button.style.display = 'block';
+                }
+            }
+        });
+    });
+</script>

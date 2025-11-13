@@ -1,0 +1,339 @@
+﻿@page
+@model GadgetHubWeb.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<style>
+    .register-page {
+        min-height: 100vh;
+        background: linear-gradient(135deg, var(--dark-bg-primary) 0%, var(--dark-bg-secondary) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+    }
+    
+    .register-container {
+        background: var(--dark-bg-secondary);
+        border-radius: 16px;
+        padding: 3rem;
+        max-width: 500px;
+        width: 100%;
+        box-shadow: var(--shadow-dark-lg);
+        border: 1px solid var(--border-dark);
+        position: relative;
+    }
+    
+    .register-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .register-logo {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--accent-blue);
+        margin-bottom: 0.5rem;
+    }
+    
+    .register-subtitle {
+        color: var(--dark-text-secondary);
+        font-size: 1rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+        color: var(--dark-text-primary);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    
+    .form-control {
+        background: var(--dark-bg-tertiary);
+        border: 1px solid var(--border-dark);
+        color: var(--dark-text-primary);
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        width: 100%;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+        outline: none;
+        border-color: var(--accent-blue);
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+    
+    .form-control::placeholder {
+        color: var(--dark-text-muted);
+    }
+    
+    .password-toggle {
+        position: relative;
+    }
+    
+    .password-toggle-btn {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--dark-text-muted);
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+    }
+    
+    .password-toggle-btn:hover {
+        color: var(--accent-blue);
+    }
+    
+    .register-btn {
+        background: var(--accent-green);
+        color: white;
+        border: none;
+        padding: 0.875rem 2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        width: 100%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .register-btn:hover {
+        background: #059669;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-dark);
+    }
+    
+    .register-btn:disabled {
+        background: var(--dark-text-muted);
+        cursor: not-allowed;
+        transform: none;
+    }
+    
+    .register-btn.loading {
+        color: transparent;
+    }
+    
+    .register-btn.loading::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        border: 2px solid transparent;
+        border-top: 2px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+    
+    @@keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    
+    .error-message {
+        background: var(--accent-red);
+        color: white;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .success-message {
+        background: var(--accent-green);
+        color: white;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .login-link {
+        text-align: center;
+        margin-top: 2rem;
+        color: var(--dark-text-secondary);
+    }
+    
+    .login-link a {
+        color: var(--accent-blue);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+    
+    .login-link a:hover {
+        color: #2563eb;
+    }
+    
+    .password-requirements {
+        background: var(--dark-bg-tertiary);
+        border: 1px solid var(--border-dark);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--dark-text-secondary);
+    }
+    
+    .password-requirements ul {
+        margin: 0;
+        padding-left: 1.2rem;
+    }
+    
+    .password-requirements li {
+        margin-bottom: 0.25rem;
+    }
+    
+    @@media (max-width: 480px) {
+        .register-container {
+            padding: 2rem 1.5rem;
+        }
+        
+        .register-logo {
+            font-size: 2rem;
+        }
+    }
+</style>
+
+<div class="register-page">
+    <div class="register-container">
+        <div class="register-header">
+            <div class="register-logo">GadgetHub</div>
+            <p class="register-subtitle">Create your account</p>
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="error-message">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>@Model.ErrorMessage</span>
+            </div>
+        }
+
+        @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+        {
+            <div class="success-message">
+                <i class="fas fa-check-circle"></i>
+                <span>@Model.SuccessMessage</span>
+            </div>
+        }
+
+        <form method="post">
+            <div class="form-group">
+                <label class="form-label" for="RegisterRequest_Username">Username</label>
+                <input asp-for="RegisterRequest.Username" class="form-control" placeholder="Enter your username" />
+                <span asp-validation-for="RegisterRequest.Username" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="RegisterRequest_Email">Email Address</label>
+                <input asp-for="RegisterRequest.Email" class="form-control" placeholder="Enter your email" />
+                <span asp-validation-for="RegisterRequest.Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="RegisterRequest_Contact">Contact Number</label>
+                <input asp-for="RegisterRequest.Contact" class="form-control" placeholder="Enter your contact number" />
+                <span asp-validation-for="RegisterRequest.Contact" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="RegisterRequest_Address">Address</label>
+                <textarea asp-for="RegisterRequest.Address" class="form-control" placeholder="Enter your address" rows="3"></textarea>
+                <span asp-validation-for="RegisterRequest.Address" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="RegisterRequest_Password">Password</label>
+                <div class="password-toggle">
+                    <input asp-for="RegisterRequest.Password" type="password" class="form-control" placeholder="Create a password" />
+                    <button type="button" class="password-toggle-btn" onclick="togglePassword()">
+                        <i class="fas fa-eye" id="passwordToggleIcon"></i>
+                    </button>
+                </div>
+                <div class="password-requirements">
+                    <strong>Password must be 6-8 characters long</strong>
+                </div>
+                <span asp-validation-for="RegisterRequest.Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="ConfirmPassword">Confirm Password</label>
+                <div class="password-toggle">
+                    <input name="ConfirmPassword" type="password" class="form-control" placeholder="Confirm your password" />
+                    <button type="button" class="password-toggle-btn" onclick="toggleConfirmPassword()">
+                        <i class="fas fa-eye" id="confirmPasswordToggleIcon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit" class="register-btn" id="registerBtn">
+                <i class="fas fa-user-plus"></i>
+                Create Account
+            </button>
+        </form>
+
+        <div class="login-link">
+            Already have an account? <a asp-page="/Login">Sign in here</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function togglePassword() {
+        const passwordInput = document.querySelector('input[name="RegisterRequest.Password"]');
+        const toggleIcon = document.getElementById('passwordToggleIcon');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleIcon.classList.remove('fa-eye');
+            toggleIcon.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            toggleIcon.classList.remove('fa-eye-slash');
+            toggleIcon.classList.add('fa-eye');
+        }
+    }
+    
+    function toggleConfirmPassword() {
+        const passwordInput = document.querySelector('input[name="ConfirmPassword"]');
+        const toggleIcon = document.getElementById('confirmPasswordToggleIcon');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleIcon.classList.remove('fa-eye');
+            toggleIcon.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            toggleIcon.classList.remove('fa-eye-slash');
+            toggleIcon.classList.add('fa-eye');
+        }
+    }
+    
+    document.querySelector('form').addEventListener('submit', function() {
+        const registerBtn = document.getElementById('registerBtn');
+        registerBtn.classList.add('loading');
+        registerBtn.disabled = true;
+    });
+</script>

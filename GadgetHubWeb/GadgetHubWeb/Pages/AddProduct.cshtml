@@ -1,0 +1,420 @@
+@page
+@model GadgetHubWeb.Pages.AddProductModel
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+<style>
+    :root {
+        --admin-primary: #1e40af;
+        --admin-secondary: #3b82f6;
+        --admin-accent: #60a5fa;
+        --admin-dark: #1e3a8a;
+        --admin-light: #dbeafe;
+        --admin-success: #10b981;
+        --admin-warning: #f59e0b;
+        --admin-danger: #ef4444;
+        --admin-gray: #6b7280;
+        --admin-light-gray: #f3f4f6;
+        --admin-white: #ffffff;
+        --admin-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --admin-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .admin-container {
+        display: flex;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+
+    .admin-sidebar {
+        width: 280px;
+        background: linear-gradient(180deg, var(--admin-primary) 0%, var(--admin-dark) 100%);
+        box-shadow: var(--admin-shadow-lg);
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+    .admin-sidebar-header {
+        padding: 2rem 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .admin-sidebar-title {
+        color: var(--admin-white);
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0;
+        text-align: center;
+    }
+
+    .admin-nav {
+        padding: 1rem 0;
+    }
+
+    .admin-nav-item {
+        margin: 0.5rem 1rem;
+    }
+
+    .admin-nav-link {
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .admin-nav-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--admin-white);
+        transform: translateX(4px);
+    }
+
+    .admin-nav-link.active {
+        background: var(--admin-accent);
+        color: var(--admin-white);
+        box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+    }
+
+    .admin-nav-link i {
+        margin-right: 0.75rem;
+        font-size: 1.1rem;
+        width: 20px;
+    }
+
+    .admin-main {
+        flex: 1;
+        margin-left: 280px;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .add-product-container {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .add-product-card {
+        background: var(--admin-white);
+        border-radius: 20px;
+        box-shadow: var(--admin-shadow-lg);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .add-product-header {
+        background: linear-gradient(135deg, var(--admin-primary) 0%, var(--admin-secondary) 100%);
+        color: var(--admin-white);
+        padding: 2rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .add-product-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        opacity: 0.3;
+    }
+
+    .add-product-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .add-product-title i {
+        font-size: 1.5rem;
+    }
+
+    .add-product-content {
+        padding: 2.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 2rem;
+    }
+
+    .form-label {
+        color: var(--admin-primary);
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        display: block;
+        font-size: 1rem;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 1rem 1.25rem;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: #f9fafb;
+        color: #374151;
+    }
+
+    .form-control:focus {
+        border-color: var(--admin-primary);
+        box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.1);
+        outline: none;
+        background: var(--admin-white);
+    }
+
+    .form-control::placeholder {
+        color: #9ca3af;
+        font-weight: 400;
+    }
+
+    .form-text {
+        color: var(--admin-gray);
+        font-size: 0.875rem;
+        margin-top: 0.5rem;
+        font-weight: 500;
+    }
+
+    .btn-add-product {
+        width: 100%;
+        background: linear-gradient(135deg, var(--admin-success) 0%, #059669 100%);
+        color: var(--admin-white);
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-add-product::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.5s;
+    }
+
+    .btn-add-product:hover::before {
+        left: 100%;
+    }
+
+    .btn-add-product:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(16, 185, 129, 0.4);
+    }
+
+    .btn-add-product:active {
+        transform: translateY(0);
+    }
+
+    .btn-add-product i {
+        font-size: 1.1rem;
+    }
+
+    .btn-back {
+        background: linear-gradient(135deg, var(--admin-gray) 0%, #4b5563 100%);
+        color: var(--admin-white);
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        text-decoration: none;
+    }
+
+    .btn-back:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+        text-decoration: none;
+        color: var(--admin-white);
+    }
+
+    .alert-admin {
+        border-radius: 12px;
+        border: none;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .alert-success {
+        background: #d1fae5;
+        color: #065f46;
+        border-left: 4px solid var(--admin-success);
+    }
+
+    .alert-danger {
+        background: #fee2e2;
+        color: #991b1b;
+        border-left: 4px solid var(--admin-danger);
+    }
+
+    .add-product-footer {
+        text-align: center;
+        padding: 1.5rem 2.5rem;
+        background: var(--admin-light-gray);
+        color: var(--admin-gray);
+        font-size: 0.875rem;
+    }
+
+    @@media (max-width: 768px) {
+        .admin-sidebar {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .admin-main {
+            margin-left: 0;
+            padding: 1rem;
+        }
+        
+        .add-product-container {
+            max-width: 100%;
+        }
+        
+        .add-product-content {
+            padding: 2rem;
+        }
+    }
+</style>
+
+<div class="admin-container">
+    <!-- Sidebar -->
+    <div class="admin-sidebar">
+        <div class="admin-sidebar-header">
+            <h2 class="admin-sidebar-title">Admin Panel</h2>
+        </div>
+        <nav class="admin-nav">
+            <div class="admin-nav-item">
+                <a href="/AdminDashboard" class="admin-nav-link">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Admin Dashboard
+                </a>
+            </div>
+            <div class="admin-nav-item">
+                <a href="/AdminRegister" class="admin-nav-link">
+                    <i class="fas fa-user-plus"></i>
+                    Admin Register
+                </a>
+            </div>
+            <div class="admin-nav-item">
+                <a href="/ProductList" class="admin-nav-link">
+                    <i class="fas fa-box"></i>
+                    Product List
+                </a>
+            </div>
+            <div class="admin-nav-item">
+                <a href="#" class="admin-nav-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    Order List
+                </a>
+            </div>
+            <div class="admin-nav-item">
+                <a href="/Logout" class="admin-nav-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="admin-main">
+        <div class="add-product-container">
+            <a href="/ProductList" class="btn-back">
+                <i class="fas fa-arrow-left"></i>
+                Back to Product List
+            </a>
+
+            <div class="add-product-card">
+                <div class="add-product-header">
+                    <h1 class="add-product-title">
+                        <i class="fas fa-plus-circle"></i>
+                        Add Product to Database
+                    </h1>
+                </div>
+
+                <div class="add-product-content">
+                    @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+                    {
+                        <div class="alert alert-admin alert-success">
+                            <i class="fas fa-check-circle"></i>
+                            @Model.SuccessMessage
+                        </div>
+                    }
+
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                        <div class="alert alert-admin alert-danger">
+                            <i class="fas fa-exclamation-circle"></i>
+                            @Model.ErrorMessage
+                        </div>
+                    }
+
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="GlobalId" class="form-label">Global ID</label>
+                            <input asp-for="GlobalId" 
+                                   class="form-control" 
+                                   placeholder="Enter the Global ID of the product" 
+                                   required />
+                            <div class="form-text">Enter the unique Global ID of the product you want to add to your database.</div>
+                        </div>
+
+                        <button type="submit" class="btn-add-product">
+                            <i class="fas fa-plus"></i>
+                            Add Product to Database
+                        </button>
+                    </form>
+                </div>
+
+                <div class="add-product-footer">
+                    <p>This will fetch the product details using the Global ID and add it to your GadgetHub database.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

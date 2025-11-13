@@ -1,0 +1,10 @@
+C:\Users\HARSHITH\Desktop\Project\GadgetCentralSystem\GadgetCentralSystem\bin\Debug\GadgetCentralSystem.exe.config
+C:\Users\HARSHITH\Desktop\Project\GadgetCentralSystem\GadgetCentralSystem\bin\Debug\GadgetCentralSystem.exe
+C:\Users\HARSHITH\Desktop\Project\GadgetCentralSystem\GadgetCentralSystem\bin\Debug\GadgetCentralSystem.pdb
+C:\Users\HARSHITH\Desktop\Project\GadgetCentralSystem\GadgetCentralSystem\obj\Debug\GadgetCentralSystem.csproj.AssemblyReference.cache
+C:\Users\HARSHITH\Desktop\Project\GadgetCentralSystem\GadgetCentralSystem\obj\Debug\GadgetCentralSystem.Form1.resources
+C:\Users\HARSHITH\Desktop\Project\GadgetCentralSystem\GadgetCentralSystem\obj\Debug\GadgetCentralSystem.Properties.Resources.resources
+C:\Users\HARSHITH\Desktop\Project\GadgetCentralSystem\GadgetCentralSystem\obj\Debug\GadgetCentralSystem.csproj.GenerateResource.cache
+C:\Users\HARSHITH\Desktop\Project\GadgetCentralSystem\GadgetCentralSystem\obj\Debug\GadgetCentralSystem.csproj.CoreCompileInputs.cache
+C:\Users\HARSHITH\Desktop\Project\GadgetCentralSystem\GadgetCentralSystem\obj\Debug\GadgetCentralSystem.exe
+C:\Users\HARSHITH\Desktop\Project\GadgetCentralSystem\GadgetCentralSystem\obj\Debug\GadgetCentralSystem.pdb

@@ -1,0 +1,449 @@
+﻿@page
+@model GadgetHubWeb.Pages.CartModel
+@{
+    ViewData["Title"] = "Shopping Cart";
+}
+
+<style>
+    .cart-page {
+        min-height: 100vh;
+        background: var(--dark-bg-primary);
+        padding: 2rem 0;
+    }
+    
+    .cart-header {
+        background: linear-gradient(135deg, var(--dark-bg-secondary) 0%, var(--dark-bg-tertiary) 100%);
+        padding: 3rem 0;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .cart-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--dark-text-primary);
+        margin-bottom: 0.5rem;
+    }
+    
+    .cart-subtitle {
+        color: var(--dark-text-secondary);
+        font-size: 1.1rem;
+    }
+    
+    .cart-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    
+    .cart-items {
+        background: var(--dark-bg-secondary);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border: 1px solid var(--border-dark);
+    }
+    
+    .cart-item {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--border-dark);
+        gap: 1.5rem;
+    }
+    
+    .cart-item:last-child {
+        border-bottom: none;
+    }
+    
+    .item-image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 8px;
+        background: var(--dark-bg-tertiary);
+    }
+    
+    .item-image-placeholder {
+        width: 100px;
+        height: 100px;
+        background: var(--dark-bg-tertiary);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--dark-text-muted);
+        font-size: 2rem;
+    }
+    
+    .item-details {
+        flex: 1;
+    }
+    
+    .item-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--dark-text-primary);
+        margin-bottom: 0.5rem;
+    }
+    
+    .item-description {
+        color: var(--dark-text-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .item-price {
+        color: var(--accent-green);
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+    
+    .item-quantity {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .quantity-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .quantity-btn {
+        background: var(--dark-bg-tertiary);
+        border: 1px solid var(--border-dark);
+        color: var(--dark-text-primary);
+        width: 35px;
+        height: 35px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .quantity-btn:hover {
+        background: var(--accent-blue);
+        color: white;
+        border-color: var(--accent-blue);
+    }
+    
+    .quantity-input {
+        background: var(--dark-bg-tertiary);
+        border: 1px solid var(--border-dark);
+        color: var(--dark-text-primary);
+        width: 60px;
+        height: 35px;
+        text-align: center;
+        border-radius: 6px;
+    }
+    
+    .quantity-input:focus {
+        outline: none;
+        border-color: var(--accent-blue);
+    }
+    
+    .remove-btn {
+        background: var(--accent-red);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+    }
+    
+    .remove-btn:hover {
+        background: #dc2626;
+        transform: translateY(-2px);
+    }
+    
+    .cart-summary {
+        background: var(--dark-bg-secondary);
+        border-radius: 12px;
+        padding: 2rem;
+        border: 1px solid var(--border-dark);
+        position: sticky;
+        top: 2rem;
+    }
+    
+    .summary-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--dark-text-primary);
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border-dark);
+    }
+    
+    .summary-row:last-child {
+        border-bottom: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--dark-text-primary);
+    }
+    
+    .summary-label {
+        color: var(--dark-text-secondary);
+    }
+    
+    .summary-value {
+        color: var(--dark-text-primary);
+        font-weight: 600;
+    }
+    
+    .total-value {
+        color: var(--accent-green);
+        font-size: 1.2rem;
+    }
+    
+    .checkout-btn {
+        background: var(--accent-green);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        width: 100%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 1.5rem;
+    }
+    
+    .checkout-btn:hover {
+        background: #059669;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-dark);
+    }
+    
+    .checkout-btn:disabled {
+        background: var(--dark-text-muted);
+        cursor: not-allowed;
+        transform: none;
+    }
+    
+    .empty-cart {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: var(--dark-text-muted);
+    }
+    
+    .empty-cart i {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        color: var(--dark-text-muted);
+    }
+    
+    .empty-cart h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--dark-text-secondary);
+    }
+    
+    .empty-cart p {
+        margin-bottom: 2rem;
+    }
+    
+    .continue-shopping-btn {
+        background: var(--accent-blue);
+        color: white;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    
+    .continue-shopping-btn:hover {
+        background: #2563eb;
+        transform: translateY(-2px);
+        color: white;
+    }
+    
+    @@media (max-width: 768px) {
+        .cart-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .item-quantity {
+            width: 100%;
+            justify-content: space-between;
+        }
+        
+        .cart-summary {
+            position: static;
+        }
+    }
+</style>
+
+<div class="cart-page">
+    <div class="cart-header">
+        <div class="container">
+            <h1 class="cart-title">Shopping Cart</h1>
+            <p class="cart-subtitle">Review your items before checkout</p>
+        </div>
+    </div>
+
+    <div class="cart-container">
+        @if (Model.CartItems.Any())
+        {
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="cart-items">
+                        @foreach (var item in Model.CartItems)
+                        {
+                            <div class="cart-item">
+                                <div class="item-image-container">
+                                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                    {
+                                        <img src="@item.ImageUrl" alt="@item.ProductName" class="item-image" />
+                                    }
+                                    else
+                                    {
+                                        <div class="item-image-placeholder">
+                                            <i class="fas fa-image"></i>
+                                        </div>
+                                    }
+                                </div>
+                                
+                                <div class="item-details">
+                                    <h3 class="item-name">@item.ProductName</h3>
+                                    <p class="item-description">@item.Description</p>
+                                    <div class="item-price">LKR @item.Price.ToString("F2")</div>
+                                </div>
+                                
+                                <div class="item-quantity">
+                                    <div class="quantity-controls">
+                                        <button class="quantity-btn" onclick="updateQuantity('@item.GlobalId', @item.Quantity - 1)">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <input type="number" 
+                                               class="quantity-input" 
+                                               value="@item.Quantity" 
+                                               min="1" 
+                                               onchange="updateQuantity('@item.GlobalId', this.value)" />
+                                        <button class="quantity-btn" onclick="updateQuantity('@item.GlobalId', @item.Quantity + 1)">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <button class="remove-btn" onclick="removeItem('@item.GlobalId')">
+                                        <i class="fas fa-trash"></i> Remove
+                                    </button>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="cart-summary">
+                        <h3 class="summary-title">Order Summary</h3>
+                        
+                        <div class="summary-row">
+                            <span class="summary-label">Subtotal</span>
+                            <span class="summary-value">LKR @Model.Subtotal.ToString("F2")</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span class="summary-label">Shipping</span>
+                            <span class="summary-value">LKR @Model.Shipping.ToString("F2")</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span class="summary-label">Tax</span>
+                            <span class="summary-value">LKR @Model.Tax.ToString("F2")</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span class="summary-label">Total</span>
+                            <span class="summary-value total-value">LKR @Model.Total.ToString("F2")</span>
+                        </div>
+                        
+                        <button class="checkout-btn" onclick="proceedToCheckout()">
+                            <i class="fas fa-credit-card"></i>
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Your cart is empty</h3>
+                <p>Looks like you haven't added any items to your cart yet.</p>
+                <a href="/Products" class="continue-shopping-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    Continue Shopping
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    function updateQuantity(globalId, newQuantity) {
+        if (newQuantity < 1) {
+            removeItem(globalId);
+            return;
+        }
+        
+        // Update quantity via form submission
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '/Cart?handler=UpdateQuantity';
+        
+        const globalIdInput = document.createElement('input');
+        globalIdInput.type = 'hidden';
+        globalIdInput.name = 'globalId';
+        globalIdInput.value = globalId;
+        
+        const quantityInput = document.createElement('input');
+        quantityInput.type = 'hidden';
+        quantityInput.name = 'quantity';
+        quantityInput.value = newQuantity;
+        
+        form.appendChild(globalIdInput);
+        form.appendChild(quantityInput);
+        document.body.appendChild(form);
+        form.submit();
+    }
+    
+    function removeItem(globalId) {
+        if (confirm('Are you sure you want to remove this item from your cart?')) {
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '/Cart?handler=RemoveItem';
+            
+            const globalIdInput = document.createElement('input');
+            globalIdInput.type = 'hidden';
+            globalIdInput.name = 'globalId';
+            globalIdInput.value = globalId;
+            
+            form.appendChild(globalIdInput);
+            document.body.appendChild(form);
+            form.submit();
+        }
+    }
+    
+    function proceedToCheckout() {
+        // Implement checkout logic
+        alert('Checkout functionality will be implemented here');
+    }
+</script>

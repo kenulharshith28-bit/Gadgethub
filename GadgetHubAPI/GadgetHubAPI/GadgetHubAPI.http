@@ -1,0 +1,61 @@
+@GadgetHubAPI_HostAddress = http://localhost:5242
+
+GET {{GadgetHubAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+# Test getting all products with stock information
+GET {{GadgetHubAPI_HostAddress}}/api/Product/
+Accept: application/json
+
+###
+
+# Test getting stock for a specific product by GlobalId
+GET {{GadgetHubAPI_HostAddress}}/api/Product/stock/PROD001
+Accept: application/json
+
+###
+
+# Test getting all products stock information
+GET {{GadgetHubAPI_HostAddress}}/api/Product/stock
+Accept: application/json
+
+###
+
+# Test quotation request - get best prices from distributors
+POST {{GadgetHubAPI_HostAddress}}/api/Quotation/get-best
+Content-Type: application/json
+
+[
+  {
+    "globalId": "TWN 1234",
+    "quantity": 2
+  }
+]
+
+###
+
+# Test order placement
+POST {{GadgetHubAPI_HostAddress}}/api/Order/place
+Content-Type: application/json
+
+{
+  "customerId": 1,
+  "products": [
+    {
+      "globalId": "PROD001",
+      "productName": "Test Product 1",
+      "quantity": 2,
+      "price": 100.00
+    },
+    {
+      "globalId": "PROD002", 
+      "productName": "Test Product 2",
+      "quantity": 1,
+      "price": 150.00
+    }
+  ]
+}
+
+###

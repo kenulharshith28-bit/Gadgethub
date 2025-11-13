@@ -1,0 +1,256 @@
+﻿@page
+@model GadgetHubWeb.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<style>
+    .login-page {
+        min-height: 100vh;
+        background: linear-gradient(135deg, var(--dark-bg-primary) 0%, var(--dark-bg-secondary) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+    }
+    
+    .login-container {
+        background: var(--dark-bg-secondary);
+        border-radius: 16px;
+        padding: 3rem;
+        max-width: 450px;
+        width: 100%;
+        box-shadow: var(--shadow-dark-lg);
+        border: 1px solid var(--border-dark);
+        position: relative;
+    }
+    
+    .login-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .login-logo {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--accent-blue);
+        margin-bottom: 0.5rem;
+    }
+    
+    .login-subtitle {
+        color: var(--dark-text-secondary);
+        font-size: 1rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+        color: var(--dark-text-primary);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    
+    .form-control {
+        background: var(--dark-bg-tertiary);
+        border: 1px solid var(--border-dark);
+        color: var(--dark-text-primary);
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        width: 100%;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+        outline: none;
+        border-color: var(--accent-blue);
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+    
+    .form-control::placeholder {
+        color: var(--dark-text-muted);
+    }
+    
+    .password-toggle {
+        position: relative;
+    }
+    
+    .password-toggle-btn {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--dark-text-muted);
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+    }
+    
+    .password-toggle-btn:hover {
+        color: var(--accent-blue);
+    }
+    
+    .login-btn {
+        background: var(--accent-blue);
+        color: white;
+        border: none;
+        padding: 0.875rem 2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        width: 100%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .login-btn:hover {
+        background: #2563eb;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-dark);
+    }
+    
+    .login-btn:disabled {
+        background: var(--dark-text-muted);
+        cursor: not-allowed;
+        transform: none;
+    }
+    
+    .login-btn.loading {
+        color: transparent;
+        background: transparent; /* hide rectangular button while loading */
+        box-shadow: none;
+    }
+    
+    .login-btn.loading::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        border: 2px solid transparent;
+        border-top: 2px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+    
+    @@keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    
+    .error-message {
+        background: var(--accent-red);
+        color: white;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .register-link {
+        text-align: center;
+        margin-top: 2rem;
+        color: var(--dark-text-secondary);
+    }
+    
+    .register-link a {
+        color: var(--accent-blue);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+    
+    .register-link a:hover {
+        color: #2563eb;
+    }
+    
+    @@media (max-width: 480px) {
+        .login-container {
+            padding: 2rem 1.5rem;
+        }
+        
+        .login-logo {
+            font-size: 2rem;
+        }
+    }
+</style>
+
+<div class="login-page">
+    <div class="login-container">
+        <div class="login-header">
+            <div class="login-logo">GadgetHub</div>
+            <p class="login-subtitle">Sign in to your account</p>
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="error-message">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>@Model.ErrorMessage</span>
+            </div>
+        }
+
+        <form method="post">
+            <div class="form-group">
+                <label class="form-label" for="LoginRequest_Username">Username</label>
+                <input asp-for="LoginRequest.Username" class="form-control" placeholder="Enter your username" />
+                <span asp-validation-for="LoginRequest.Username" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="LoginRequest_Password">Password</label>
+                <div class="password-toggle">
+                    <input asp-for="LoginRequest.Password" type="password" class="form-control" placeholder="Enter your password" />
+                    <button type="button" class="password-toggle-btn" onclick="togglePassword()">
+                        <i class="fas fa-eye" id="passwordToggleIcon"></i>
+                    </button>
+                </div>
+                <span asp-validation-for="LoginRequest.Password" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="login-btn" id="loginBtn">
+                <i class="fas fa-sign-in-alt"></i>
+                Sign In
+            </button>
+        </form>
+
+        <div class="register-link">
+            Don't have an account? <a asp-page="/Register">Create one here</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function togglePassword() {
+        const passwordInput = document.querySelector('input[name="LoginRequest.Password"]');
+        const toggleIcon = document.getElementById('passwordToggleIcon');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleIcon.classList.remove('fa-eye');
+            toggleIcon.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            toggleIcon.classList.remove('fa-eye-slash');
+            toggleIcon.classList.add('fa-eye');
+        }
+    }
+    
+    document.querySelector('form').addEventListener('submit', function() {
+        const loginBtn = document.getElementById('loginBtn');
+        loginBtn.classList.add('loading');
+        loginBtn.disabled = true;
+    });
+</script>

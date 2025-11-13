@@ -1,0 +1,307 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\models\\quotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\models\\quotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\dto\\quotationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\dto\\quotationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\dto\\quotationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\dto\\quotationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\dto\\productwritedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\dto\\productwritedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\dto\\productreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\dto\\productreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\data\\productrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\data\\productrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\controllers\\quotationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\controllers\\quotationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Migrations\\20250910150453_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GadgetCentralService\\Migrations\\20250910150453_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Migrations\\20250910104517_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GadgetCentralService\\Migrations\\20250910104517_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Migrations\\20250910102534_AddGlobalIdAndImageUrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GadgetCentralService\\Migrations\\20250910102534_AddGlobalIdAndImageUrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|c:\\users\\harshith\\desktop\\project\\gadgetcentralservice\\gadgetcentralservice\\migrations\\20250910152637_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36111864-E5DB-4BEC-A0AC-3FDA72A8F165}|GadgetCentralService\\GadgetCentralService.csproj|solutionrelative:gadgetcentralservice\\migrations\\20250910152637_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Quotation.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Models\\Quotation.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\Models\\Quotation.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Models\\Quotation.cs",
+              "RelativeToolTip": "GadgetCentralService\\Models\\Quotation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T14:58:14.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Models\\Product.cs",
+              "RelativeToolTip": "GadgetCentralService\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T08:33:07.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Models\\Order.cs",
+              "RelativeToolTip": "GadgetCentralService\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T14:58:07.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductWriteDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\DTO\\ProductWriteDTO.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\DTO\\ProductWriteDTO.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\DTO\\ProductWriteDTO.cs",
+              "RelativeToolTip": "GadgetCentralService\\DTO\\ProductWriteDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T08:06:56.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductReadDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\DTO\\ProductReadDTO.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\DTO\\ProductReadDTO.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\DTO\\ProductReadDTO.cs",
+              "RelativeToolTip": "GadgetCentralService\\DTO\\ProductReadDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T14:58:41.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Program.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\Program.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Program.cs",
+              "RelativeToolTip": "GadgetCentralService\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T05:46:22.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "QuotationResponse.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\DTO\\QuotationResponse.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\DTO\\QuotationResponse.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\DTO\\QuotationResponse.cs",
+              "RelativeToolTip": "GadgetCentralService\\DTO\\QuotationResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T14:58:23.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "QuotationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\DTO\\QuotationRequest.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\DTO\\QuotationRequest.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\DTO\\QuotationRequest.cs",
+              "RelativeToolTip": "GadgetCentralService\\DTO\\QuotationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T14:58:30.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Profiles\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\Profiles\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Profiles\\MappingProfile.cs",
+              "RelativeToolTip": "GadgetCentralService\\Profiles\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T08:06:38.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductRepo.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Data\\ProductRepo.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\Data\\ProductRepo.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Data\\ProductRepo.cs",
+              "RelativeToolTip": "GadgetCentralService\\Data\\ProductRepo.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA2wC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T14:57:42.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "GadgetCentralService\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T14:56:10.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "QuotationController.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Controllers\\QuotationController.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\Controllers\\QuotationController.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Controllers\\QuotationController.cs",
+              "RelativeToolTip": "GadgetCentralService\\Controllers\\QuotationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T14:59:19.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "GadgetCentralService\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAQwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T15:02:44.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "20250910152637_first.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Migrations\\20250910152637_first.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\Migrations\\20250910152637_first.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Migrations\\20250910152637_first.cs",
+              "RelativeToolTip": "GadgetCentralService\\Migrations\\20250910152637_first.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T15:26:37.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20250910150453_first.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Migrations\\20250910150453_first.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\Migrations\\20250910150453_first.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Migrations\\20250910150453_first.cs",
+              "RelativeToolTip": "GadgetCentralService\\Migrations\\20250910150453_first.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T15:04:53.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\appsettings.json",
+              "RelativeDocumentMoniker": "GadgetCentralService\\appsettings.json",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\appsettings.json",
+              "RelativeToolTip": "GadgetCentralService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAClAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-09T05:52:32.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20250910104517_first.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Migrations\\20250910104517_first.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\Migrations\\20250910104517_first.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Migrations\\20250910104517_first.cs",
+              "RelativeToolTip": "GadgetCentralService\\Migrations\\20250910104517_first.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T10:45:17.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20250910102534_AddGlobalIdAndImageUrl.cs",
+              "DocumentMoniker": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Migrations\\20250910102534_AddGlobalIdAndImageUrl.cs",
+              "RelativeDocumentMoniker": "GadgetCentralService\\Migrations\\20250910102534_AddGlobalIdAndImageUrl.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Project\\GadgetCentralService\\GadgetCentralService\\Migrations\\20250910102534_AddGlobalIdAndImageUrl.cs",
+              "RelativeToolTip": "GadgetCentralService\\Migrations\\20250910102534_AddGlobalIdAndImageUrl.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T10:25:34.554Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,765 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] · GadgetHub</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/GadgetHubWeb.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg-primary: #0a0a0a;
+            --dark-bg-secondary: #1a1a1a;
+            --dark-bg-tertiary: #2a2a2a;
+            --dark-text-primary: #ffffff;
+            --dark-text-secondary: #b3b3b3;
+            --dark-text-muted: #666666;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-purple: #8b5cf6;
+            --border-dark: #333333;
+            --shadow-dark: 0 4px 6px rgba(0,0,0,0.3);
+            --shadow-dark-lg: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark-bg-primary);
+            color: var(--dark-text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .main-navigation {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-bottom: 1px solid #e2e8f0;
+            padding: 0.75rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            gap: 2rem;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            margin: 0;
+            align-items: center;
+            flex: 1;
+            justify-content: center;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-link {
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-blue);
+            background: rgba(59, 130, 246, 0.08);
+            transform: translateY(-1px);
+        }
+        
+        .nav-link i {
+            font-size: 0.7rem;
+        }
+        
+        .sale-badge {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 0.15rem 0.4rem;
+            border-radius: 12px;
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @@keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #374151;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item:hover {
+            background: #f8fafc;
+            color: var(--accent-blue);
+        }
+        
+        .brand-logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: -0.8px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .brand-logo:hover {
+            transform: scale(1.02);
+        }
+        
+        .brand-dot {
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, #1d4ed8 100%);
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @@keyframes glow {
+            from { box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3); }
+            to { box-shadow: 0 2px 8px rgba(59, 130, 246, 0.6); }
+        }
+        
+        .utility-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .login-link {
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .login-link:hover {
+            color: var(--accent-blue);
+            background: rgba(59, 130, 246, 0.08);
+            transform: translateY(-1px);
+        }
+        
+        .utility-icons {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .utility-icon {
+            color: #374151;
+            font-size: 1.3rem;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .utility-icon:hover {
+            color: var(--accent-blue);
+            background: rgba(59, 130, 246, 0.08);
+            transform: translateY(-1px);
+        }
+        
+        .user-welcome {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(59, 130, 246, 0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            font-size: 0.9rem;
+            color: #374151;
+        }
+
+        .user-name {
+            font-weight: 600;
+            color: var(--accent-blue);
+        }
+
+        .icon-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--accent-blue);
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 700;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cart-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1f2937;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .user-welcome {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        .user-name {
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+        
+        .btn-primary {
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-dark);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--accent-red);
+            border: 2px solid var(--accent-red);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: var(--accent-red);
+            color: white;
+        }
+        
+        .main-content {
+            min-height: calc(100vh - 200px);
+        }
+        
+        .page-footer {
+            background: var(--dark-bg-secondary);
+            color: var(--dark-text-secondary);
+            padding: 3rem 0 1rem;
+            margin-top: 3rem;
+            border-top: 1px solid var(--border-dark);
+        }
+
+        .footer-section {
+            margin-bottom: 2rem;
+        }
+
+        .footer-title {
+            color: var(--dark-text-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-subtitle {
+            color: var(--dark-text-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            color: var(--dark-text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--dark-text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--dark-bg-tertiary);
+            color: var(--dark-text-secondary);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--accent-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .footer-divider {
+            border: none;
+            height: 1px;
+            background: var(--border-dark);
+            margin: 2rem 0 1rem;
+        }
+
+        .footer-copyright {
+            color: var(--dark-text-muted);
+            margin: 0;
+        }
+
+        .payment-methods {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .payment-text {
+            color: var(--dark-text-muted);
+            font-size: 0.9rem;
+        }
+
+        .payment-methods i {
+            font-size: 1.5rem;
+            color: var(--dark-text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .payment-methods i:hover {
+            color: var(--accent-blue);
+        }
+        
+        .page-footer a {
+            color: var(--dark-text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .page-footer a:hover {
+            color: var(--accent-blue);
+        }
+        
+        .cart-icon {
+            color: var(--accent-blue);
+            font-size: 1.4rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            position: relative;
+            padding: 0.75rem;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            min-width: 80px;
+        }
+        
+        .cart-icon:hover {
+            color: var(--accent-green);
+            transform: translateY(-2px) scale(1.05);
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border-color: rgba(16, 185, 129, 0.2);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.15);
+        }
+        
+        .cart-icon i {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cart-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-green) 100%);
+            border-radius: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+        
+        .cart-icon:hover::before {
+            opacity: 0.1;
+        }
+        
+        .cart-info {
+            margin-top: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #374151;
+            text-align: center;
+            line-height: 1.2;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cart-icon:hover .cart-info {
+            color: var(--accent-green);
+        }
+        
+        .cart-icon:active {
+            transform: translateY(0) scale(0.98);
+        }
+        
+        .cart-icon i {
+            filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.2));
+        }
+        
+        .cart-icon:hover i {
+            filter: drop-shadow(0 4px 8px rgba(16, 185, 129, 0.3));
+        }
+        
+        @@media (max-width: 768px) {
+            .nav-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1rem;
+                padding: 0.75rem 1.5rem;
+            }
+            
+            .nav-menu {
+                gap: 1.5rem;
+                order: 2;
+                width: 100%;
+                justify-content: center;
+                margin-top: 0.5rem;
+            }
+            
+            .brand-logo {
+                font-size: 1.8rem;
+                order: 1;
+            }
+            
+            .utility-links {
+                order: 3;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+            
+            .utility-icons {
+                gap: 0.5rem;
+            }
+            
+            .nav-link {
+                font-size: 0.85rem;
+                padding: 0.5rem 0.75rem;
+            }
+            
+            .login-link {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.75rem;
+            }
+            
+            .sale-badge {
+                font-size: 0.5rem;
+                padding: 0.1rem 0.3rem;
+            }
+            
+            .user-welcome {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.75rem;
+            }
+        }
+        
+        @@media (max-width: 480px) {
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .utility-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .cart-info {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="main-navigation">
+            <div class="nav-container">
+                <!-- Left Side - Brand Logo -->
+                <a class="brand-logo" asp-page="/Index">
+                    GadgetHub
+                    <span class="brand-dot"></span>
+                </a>
+                
+                <!-- Center - Navigation Menu -->
+                <ul class="nav-menu">
+                        <li class="nav-item">
+                        <a class="nav-link" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" asp-page="/Products">
+                            Product
+                            <span class="sale-badge">SALE</span>
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" asp-page="/ContactUs">
+                            <i class="fas fa-envelope"></i>
+                            Contact Us
+                        </a>
+                        </li>
+                        @if (Context.Session.GetString("AuthToken") != null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-page="/Orders">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    Orders
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                    
+                <!-- Right Side - Cart and Login -->
+                <div class="utility-links">
+                    @if (Context.Session.GetString("AuthToken") != null)
+                    {
+                        <div class="user-welcome">
+                            Welcome, <span class="user-name">@Context.Session.GetString("UserName")</span>
+                        </div>
+                        @if (Context.Session.GetString("UserRole")?.ToLower() == "admin")
+                        {
+                            <a class="login-link" asp-page="/AdminDashboard">
+                                <i class="fas fa-tachometer-alt"></i> Admin Dashboard
+                            </a>
+                        }
+                        <a class="login-link" asp-page="/Logout">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    }
+                    else
+                    {
+                        <a class="login-link" asp-page="/Login">Login / Register</a>
+                    }
+                    
+                    <div class="utility-icons">
+                        <a asp-page="/Cart" class="utility-icon cart-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            <div class="cart-info">
+                                <span>0 / LKR 0.00</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+            @RenderBody()
+        </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">GadgetHub</h5>
+                        <p class="footer-description">Your premier destination for premium electronics and gadgets. We connect you with the best distributors for the latest technology.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h6 class="footer-subtitle">Quick Links</h6>
+                        <ul class="footer-links">
+                            <li><a href="/Index">Home</a></li>
+                            <li><a href="/Products">Products</a></li>
+                            <li><a href="/ContactUs">Contact Us</a></li>
+                            <li><a href="/Cart">Cart</a></li>
+                            <li><a href="/TrackOrder">Track Order</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h6 class="footer-subtitle">Account</h6>
+                        <ul class="footer-links">
+                            <li><a href="/Login">Login</a></li>
+                            <li><a href="/Register">Register</a></li>
+                            <li><a href="#">My Orders</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h6 class="footer-subtitle">Support</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="/ContactUs">Contact Us</a></li>
+                            <li><a href="#">Shipping Info</a></li>
+                            <li><a href="#">Returns</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h6 class="footer-subtitle">Legal</h6>
+                        <ul class="footer-links">
+                            <li><a href="/Privacy">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="footer-copyright">&copy; 2024 GadgetHub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="payment-methods">
+                        <span class="payment-text">We Accept:</span>
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-amex"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

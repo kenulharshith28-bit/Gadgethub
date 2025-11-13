@@ -1,0 +1,8 @@
+﻿@page "{orderId:int}"
+@model GadgetHubWeb.Pages.OrderConfirmationModel
+
+<h2>✅ Order Confirmed!</h2>
+<p>Your order ID is: <strong>@Model.Order.OrderId</strong></p>
+<p>Total Amount: LKR@Model.Order.TotalAmount</p>
+<p>Status: @Model.Order.Status</p>
+<p>You can track your order <a href="/TrackOrder/@Model.Order.OrderId">here</a>.</p>

@@ -1,0 +1,512 @@
+﻿@page "/ProductDetails/{id:int}"
+@model GadgetHubWeb.Pages.ProductDetailsModel
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<style>
+    .product-details-page {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        padding: 2rem 0;
+    }
+    
+    .product-details-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    
+    .back-btn {
+        background: #3b82f6;
+        color: white;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        transition: all 0.3s ease;
+    }
+    
+    .back-btn:hover {
+        background: #2563eb;
+        transform: translateY(-2px);
+        color: white;
+    }
+    
+    .product-card {
+        background: #1a1a1a;
+        border-radius: 16px;
+        padding: 2rem;
+        border: 1px solid #333333;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    
+    .product-header {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .product-image {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+        background: #2a2a2a;
+    }
+    
+    .product-image-placeholder {
+        width: 300px;
+        height: 300px;
+        background: #2a2a2a;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666666;
+        font-size: 3rem;
+    }
+    
+    .product-info {
+        flex: 1;
+    }
+    
+    .product-name {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 1rem;
+    }
+    
+    .product-description {
+        color: #b3b3b3;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    
+    .price-section {
+        background: #2a2a2a;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        border: 1px solid #333333;
+    }
+    
+    .price-label {
+        color: #b3b3b3;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .price-value {
+        color: #10b981;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+    
+    .distributor-info {
+        color: #b3b3b3;
+        font-size: 0.9rem;
+    }
+
+    .distributor-price {
+        color: #888888;
+        font-size: 0.85rem;
+        margin-top: 0.25rem;
+        font-style: italic;
+    }
+    
+    .distributor-name {
+        color: #3b82f6;
+        font-weight: 600;
+    }
+    
+    .quantity-section {
+        margin-bottom: 2rem;
+    }
+    
+    .quantity-label {
+        color: white;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    
+    .quantity-controls {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .quantity-btn {
+        background: #3b82f6;
+        border: none;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 700;
+    }
+    
+    .quantity-btn:hover {
+        background: #2563eb;
+        transform: scale(1.1);
+    }
+    
+    .quantity-input {
+        background: #2a2a2a;
+        border: 2px solid #333333;
+        color: white;
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+    
+    .quantity-input:focus {
+        outline: none;
+        border-color: #3b82f6;
+    }
+    
+    .action-buttons {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .add-to-cart-btn {
+        background: linear-gradient(135deg, #10b981, #059669);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        flex: 1;
+    }
+    
+    .add-to-cart-btn:hover {
+        background: linear-gradient(135deg, #059669, #047857);
+        transform: translateY(-2px);
+    }
+    
+    .place-order-btn {
+        background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        flex: 1;
+    }
+    
+    .place-order-btn:hover {
+        background: linear-gradient(135deg, #7c3aed, #6d28d9);
+        transform: translateY(-2px);
+    }
+    
+    .error-message {
+        background: linear-gradient(135deg, #ef4444, #dc2626);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: 600;
+    }
+
+    .info-message {
+        background: linear-gradient(135deg, #3b82f6, #2563eb);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: 600;
+    }
+    
+    .success-message {
+        background: linear-gradient(135deg, #10b981, #059669);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: 600;
+    }
+    
+    @@media (max-width: 768px) {
+        .product-header {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .product-image, .product-image-placeholder {
+            width: 100%;
+            height: 250px;
+        }
+        
+        .product-name {
+            font-size: 2rem;
+        }
+        
+        .action-buttons {
+            flex-direction: column;
+        }
+    }
+</style>
+
+<div class="product-details-page">
+    <div class="product-details-container">
+        <a href="/Products" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to Products
+        </a>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="info-message">
+                <i class="fas fa-info-circle"></i>
+                <span>@Model.ErrorMessage</span>
+            </div>
+        }
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="success-message">
+                <i class="fas fa-check-circle"></i>
+                <span>@TempData["SuccessMessage"]</span>
+            </div>
+        }
+
+        @if (Model.ProductQuotation != null)
+        {
+            <div class="product-card">
+                <div class="product-header">
+                    <div>
+                        @if (!string.IsNullOrEmpty(Model.ProductQuotation.ImageUrl))
+                        {
+                            <img src="@Model.ProductQuotation.ImageUrl" 
+                                 alt="@Model.ProductQuotation.ProductName" 
+                                 class="product-image" />
+                        }
+                        else
+                        {
+                            <div class="product-image-placeholder">
+                                <i class="fas fa-image"></i>
+                            </div>
+                        }
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-name">@Model.ProductQuotation.ProductName</h1>
+                        <p class="product-description">@Model.ProductQuotation.Description</p>
+                        
+                        <div class="price-section">
+                            <div class="price-value" id="price-display" data-unit-price="@Model.ProductQuotation.Price.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture)">LKR @Model.ProductQuotation.Price.ToString("F2")</div>
+                            <div class="distributor-price">
+                                <small>Distributor Price: LKR @((Model.ProductQuotation.Price / 1.10m).ToString("F2"))</small>
+                            </div>
+                            <div class="distributor-info">
+                                Sold by: <span class="distributor-name">@Model.ProductQuotation.DistributorName</span><br>
+                                Location: @Model.ProductQuotation.DistributorLocation
+                            </div>
+                        </div>
+                        
+                        <div class="quantity-section">
+                            <label class="quantity-label">Quantity:</label>
+                            <div class="quantity-controls">
+                                <button type="button" class="quantity-btn" onclick="decreaseQuantity()">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="number" 
+                                       id="quantity" 
+                                       value="1" 
+                                       min="1" 
+                                       max="99"
+                                       class="quantity-input" />
+                                <button type="button" class="quantity-btn" onclick="increaseQuantity()">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <form method="post" asp-page-handler="AddToCart" style="flex: 1;">
+                                <input type="hidden" name="globalId" value="@Model.ProductQuotation.GlobalId" />
+                                <input type="hidden" name="quantity" id="cart-quantity" value="1" />
+                                <button type="submit" class="add-to-cart-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </form>
+                            
+                            <form method="post" asp-page-handler="PlaceOrder" style="flex: 1;">
+                                <input type="hidden" name="globalId" value="@Model.ProductQuotation.GlobalId" />
+                                <input type="hidden" name="quantity" id="order-quantity" value="1" />
+                                <button type="submit" class="place-order-btn">
+                                    <i class="fas fa-credit-card"></i>
+                                    Place Order
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="product-card">
+                <div class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Product not found or pricing not available. Please try again later.</span>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    function increaseQuantity() {
+        console.log('increaseQuantity called');
+        const quantityInput = document.getElementById('quantity');
+        if (!quantityInput) {
+            console.error('Quantity input not found');
+            return;
+        }
+        const currentValue = parseInt(quantityInput.value);
+        console.log('Current quantity:', currentValue);
+        if (currentValue < 99) {
+            quantityInput.value = currentValue + 1;
+            updateQuantity();
+        }
+    }
+    
+    function decreaseQuantity() {
+        console.log('decreaseQuantity called');
+        const quantityInput = document.getElementById('quantity');
+        if (!quantityInput) {
+            console.error('Quantity input not found');
+            return;
+        }
+        const currentValue = parseInt(quantityInput.value);
+        console.log('Current quantity:', currentValue);
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+            updateQuantity();
+        }
+    }
+    
+    function updateQuantity() {
+        console.log('updateQuantity called');
+        const quantity = document.getElementById('quantity').value;
+        console.log('New quantity:', quantity);
+        
+        const cartQuantity = document.getElementById('cart-quantity');
+        const orderQuantity = document.getElementById('order-quantity');
+        
+        if (cartQuantity) {
+            cartQuantity.value = quantity;
+            console.log('Updated cart-quantity to:', quantity);
+        } else {
+            console.error('cart-quantity element not found');
+        }
+        
+        if (orderQuantity) {
+            orderQuantity.value = quantity;
+            console.log('Updated order-quantity to:', quantity);
+        } else {
+            console.error('order-quantity element not found');
+        }
+        
+        updatePrice();
+    }
+    
+    function updatePrice() {
+        console.log('updatePrice called');
+        const quantity = parseInt(document.getElementById('quantity').value);
+        const priceDisplay = document.getElementById('price-display');
+        
+        if (!priceDisplay) {
+            console.error('price-display element not found');
+            return;
+        }
+        
+        // Always multiply from unit price stored in data attribute (avoids compounding)
+        const unitPrice = Number(priceDisplay.dataset.unitPrice);
+        const totalPrice = unitPrice * quantity;
+        priceDisplay.textContent = 'LKR ' + totalPrice.toFixed(2);
+        console.log('Updated price to:', totalPrice);
+    }
+    
+    // Add quantity input validation
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM loaded, setting up event listeners');
+        
+        const quantityInput = document.getElementById('quantity');
+        if (quantityInput) {
+            console.log('Quantity input found, adding event listener');
+            quantityInput.addEventListener('input', function() {
+                let value = parseInt(this.value);
+                if (isNaN(value) || value < 1) {
+                    this.value = 1;
+                } else if (value > 99) {
+                    this.value = 99;
+                }
+                updateQuantity();
+            });
+        } else {
+            console.error('Quantity input not found on DOM load');
+        }
+        
+        // Add form submission debugging
+        const addToCartForm = document.querySelector('form[action*="AddToCart"]');
+        if (addToCartForm) {
+            console.log('Add to Cart form found');
+            addToCartForm.addEventListener('submit', function(e) {
+                console.log('Add to Cart form submitted');
+                const globalId = this.querySelector('input[name="globalId"]').value;
+                const quantity = this.querySelector('input[name="quantity"]').value;
+                console.log('GlobalId:', globalId, 'Quantity:', quantity);
+            });
+        } else {
+            console.error('Add to Cart form not found');
+        }
+        
+        const placeOrderForm = document.querySelector('form[action*="PlaceOrder"]');
+        if (placeOrderForm) {
+            console.log('Place Order form found');
+            placeOrderForm.addEventListener('submit', function(e) {
+                console.log('Place Order form submitted');
+                const globalId = this.querySelector('input[name="globalId"]').value;
+                const quantity = this.querySelector('input[name="quantity"]').value;
+                console.log('GlobalId:', globalId, 'Quantity:', quantity);
+            });
+        } else {
+            console.error('Place Order form not found');
+        }
+    });
+</script>

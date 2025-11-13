@@ -1,0 +1,457 @@
+﻿@page
+@model GadgetHubWeb.Pages.AdminDashboard.DashboardModel
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<style>
+    :root {
+        --admin-primary: #1e40af;
+        --admin-secondary: #3b82f6;
+        --admin-accent: #60a5fa;
+        --admin-dark: #1e3a8a;
+        --admin-light: #dbeafe;
+        --admin-success: #10b981;
+        --admin-warning: #f59e0b;
+        --admin-danger: #ef4444;
+        --admin-gray: #6b7280;
+        --admin-light-gray: #f3f4f6;
+        --admin-white: #ffffff;
+        --admin-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --admin-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .admin-container {
+        display: flex;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+
+    .admin-sidebar {
+        width: 280px;
+        background: linear-gradient(180deg, var(--admin-primary) 0%, var(--admin-dark) 100%);
+        box-shadow: var(--admin-shadow-lg);
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+    .admin-sidebar-header {
+        padding: 2rem 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .admin-sidebar-title {
+        color: var(--admin-white);
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0;
+        text-align: center;
+    }
+
+    .admin-nav {
+        padding: 1rem 0;
+    }
+
+    .admin-nav-item {
+        margin: 0.5rem 1rem;
+    }
+
+    .admin-nav-link {
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .admin-nav-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--admin-white);
+        transform: translateX(4px);
+    }
+
+    .admin-nav-link.active {
+        background: var(--admin-accent);
+        color: var(--admin-white);
+        box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+    }
+
+    .admin-nav-link i {
+        margin-right: 0.75rem;
+        font-size: 1.1rem;
+        width: 20px;
+    }
+
+    .admin-main {
+        flex: 1;
+        margin-left: 280px;
+        padding: 2rem;
+    }
+
+    .admin-header {
+        background: var(--admin-white);
+        padding: 1.5rem 2rem;
+        border-radius: 16px;
+        box-shadow: var(--admin-shadow);
+        margin-bottom: 2rem;
+        border-left: 4px solid var(--admin-primary);
+    }
+
+    .admin-title {
+        color: var(--admin-primary);
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .admin-subtitle {
+        color: var(--admin-gray);
+        margin: 0.5rem 0 0 0;
+        font-size: 1rem;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .stat-card {
+        background: var(--admin-white);
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: var(--admin-shadow);
+        border-left: 4px solid;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--admin-shadow-lg);
+    }
+
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+        border-radius: 50%;
+        transform: translate(30px, -30px);
+    }
+
+    .stat-card.primary { border-left-color: var(--admin-primary); }
+    .stat-card.success { border-left-color: var(--admin-success); }
+    .stat-card.warning { border-left-color: var(--admin-warning); }
+    .stat-card.info { border-left-color: var(--admin-accent); }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--admin-primary);
+        margin: 0;
+        line-height: 1;
+    }
+
+    .stat-label {
+        color: var(--admin-gray);
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin: 0.5rem 0 0 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .admin-section {
+        background: var(--admin-white);
+        border-radius: 16px;
+        box-shadow: var(--admin-shadow);
+        margin-bottom: 2rem;
+        overflow: hidden;
+    }
+
+    .admin-section-header {
+        background: linear-gradient(135deg, var(--admin-primary) 0%, var(--admin-secondary) 100%);
+        color: var(--admin-white);
+        padding: 1.5rem 2rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .admin-section-content {
+        padding: 2rem;
+    }
+
+    .admin-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+    }
+
+    .admin-table th {
+        background: var(--admin-light-gray);
+        color: var(--admin-primary);
+        font-weight: 600;
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 2px solid #e5e7eb;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .admin-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #e5e7eb;
+        vertical-align: middle;
+        color: #111827; /* High-contrast text color for readability */
+    }
+
+    .text-muted { color: var(--admin-gray); }
+
+    .admin-table tbody tr:hover {
+        background: var(--admin-light-gray);
+    }
+
+    .status-badge {
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .status-completed { background: #d1fae5; color: #065f46; }
+    .status-pending { background: #fef3c7; color: #92400e; }
+    .status-processing { background: #dbeafe; color: #1e40af; }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+        color: var(--admin-primary);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .form-control {
+        border: 2px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+        border-color: var(--admin-primary);
+        box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+        outline: none;
+    }
+
+    .btn-admin {
+        background: linear-gradient(135deg, var(--admin-primary) 0%, var(--admin-secondary) 100%);
+        color: var(--admin-white);
+        border: none;
+        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .btn-admin:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+    }
+
+    .alert-admin {
+        border-radius: 12px;
+        border: none;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+    }
+
+    .alert-success {
+        background: #d1fae5;
+        color: #065f46;
+        border-left: 4px solid var(--admin-success);
+    }
+
+    .alert-danger {
+        background: #fee2e2;
+        color: #991b1b;
+        border-left: 4px solid var(--admin-danger);
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 3rem;
+        color: var(--admin-gray);
+    }
+
+    .empty-state i {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        opacity: 0.5;
+    }
+
+    @@media (max-width: 768px) {
+        .admin-sidebar {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .admin-main {
+            margin-left: 0;
+            padding: 1rem;
+        }
+        
+        .stats-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="admin-container">
+    <!-- Sidebar -->
+    <div class="admin-sidebar">
+        <div class="admin-sidebar-header">
+            <h2 class="admin-sidebar-title">Admin Panel</h2>
+        </div>
+        <nav class="admin-nav">
+            <div class="admin-nav-item">
+                <a href="#" class="admin-nav-link active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Admin Dashboard
+                </a>
+            </div>
+            <div class="admin-nav-item">
+                <a href="/AdminRegister" class="admin-nav-link">
+                    <i class="fas fa-user-plus"></i>
+                    Admin Register
+                </a>
+            </div>
+            <div class="admin-nav-item">
+                <a href="/ProductList" class="admin-nav-link">
+                    <i class="fas fa-box"></i>
+                    Product List
+                </a>
+            </div>
+            <div class="admin-nav-item">
+                <a href="#" class="admin-nav-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    Order List
+                </a>
+            </div>
+            <div class="admin-nav-item">
+                <a href="/Logout" class="admin-nav-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="admin-main">
+        <div class="admin-header">
+            <h1 class="admin-title">Admin Dashboard</h1>
+            <p class="admin-subtitle">Welcome back! Here's what's happening with your store today.</p>
+        </div>
+
+
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+            <div class="stat-card primary">
+                <h3 class="stat-number">@Model.Stats.Products</h3>
+                <p class="stat-label">Total Products</p>
+            </div>
+            <div class="stat-card success">
+                <h3 class="stat-number">@Model.Stats.Customers</h3>
+                <p class="stat-label">Total Customers</p>
+        </div>
+            <div class="stat-card warning">
+                <h3 class="stat-number">@Model.Stats.Orders</h3>
+                <p class="stat-label">Total Orders</p>
+    </div>
+            <div class="stat-card info">
+                <h3 class="stat-number">LKR @Model.Stats.Revenue.ToString("F2")</h3>
+                <p class="stat-label">Total Revenue</p>
+            </div>
+        </div>
+
+
+        <!-- Recent Orders Section -->
+        <div class="admin-section">
+            <h3 class="admin-section-header">
+                <i class="fas fa-shopping-cart"></i> Recently Added Orders
+            </h3>
+            <div class="admin-section-content">
+                @if (Model.RecentOrdersList.Any())
+                {
+                    <table class="admin-table">
+    <thead>
+        <tr>
+                                <th>Order ID</th>
+            <th>Customer</th>
+            <th>Status</th>
+                                <th>Order Date</th>
+                                <th>Distributor</th>
+                                <th>Items</th>
+        </tr>
+    </thead>
+    <tbody>
+                            @foreach (var order in Model.RecentOrdersList)
+        {
+            <tr>
+                                    <td><strong>#@order.Id</strong></td>
+                <td>@order.CustomerName</td>
+                                    <td>
+                                        <span class="status-badge @(order.Status == "Completed" ? "status-completed" : order.Status == "Pending" ? "status-pending" : "status-processing")">
+                                            @order.Status
+                                        </span>
+                                    </td>
+                                    <td>@order.OrderDate.ToString("MMM dd, yyyy HH:mm")</td>
+                                    <td>
+                                        <div>
+                                            <strong>@order.DistributorName</strong><br>
+                                            <small class="text-muted">@order.DistributorLocation</small>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge status-processing">@order.ItemCount items</span>
+                                    </td>
+            </tr>
+        }
+    </tbody>
+</table>
+                }
+                else
+                {
+                    <div class="empty-state">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h4>No Recent Orders</h4>
+                        <p>No orders have been placed recently.</p>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </div>
+</div>
